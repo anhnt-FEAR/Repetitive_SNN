@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jul 24 16:55:01 2023
+# Process ID: 28123
+# Current directory: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/impl_1
+# Command line: vivado -log spike_rom.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source spike_rom.tcl -notrace
+# Log file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/impl_1/spike_rom.vdi
+# Journal file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source spike_rom.tcl -notrace

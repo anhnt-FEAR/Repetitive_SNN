@@ -1,0 +1,101 @@
+# if { ![info exists ::env(BOARD) ]} {
+#   set ::env(BOARD) "zedboard"
+# }
+
+if { ![info exists ::env(XILINX_PART)] } {
+  set ::env(XILINX_PART) "xc7z020clg484-1"
+}
+
+if { ![info exists ::env(XILINX_BOARD)] } {
+    set ::env(XILINX_BOARD) "em.avnet.com:zed:part0:1.3"
+}
+
+create_project SNN . -part $::env(XILINX_PART)
+set_property board $::env(XILINX_BOARD) [current_project]
+
+# sets up RTL directory
+
+set_property include_dirs {
+    ../../RTL \
+} [current_fileset]
+
+# sets up Vivado messages in a more sensible way
+
+set_msg_config -id {[Synth 8-3352]}         -new_severity "critical warning"
+set_msg_config -id {[Synth 8-350]}          -new_severity "critical warning"
+set_msg_config -id {[Synth 8-2490]}         -new_severity "warning"
+set_msg_config -id {[Synth 8-2306]}         -new_severity "info"
+set_msg_config -id {[Synth 8-3331]}         -new_severity "critical warning"
+set_msg_config -id {[Synth 8-3332]}         -new_severity "info"
+set_msg_config -id {[Synth 8-2715]}         -new_severity "error"
+set_msg_config -id {[Opt 31-35]}            -new_severity "info"
+set_msg_config -id {[Opt 31-32]}            -new_severity "info"
+set_msg_config -id {[Shape Builder 18-119]} -new_severity "warning"
+set_msg_config -id {[Filemgmt 20-742]}      -new_severity "error"
+
+# sets up RTL files
+set FPGA_IPS ../ips
+set NAME "SNN"
+# set IPS ../../ips
+# set FPGA_RTL ../rtl
+
+add_files -norecurse $FPGA_IPS/xilinx_mem_1024x8/ip/xilinx_mem_1024x8.dcp
+
+set SNN_NODE " \
+    ../../RTL/axi_slave_if.sv \
+    ../../RTL/LIF.v \
+    ../../RTL/common.v \
+    ../../RTL/LIF_neuron.v \
+    ../../RTL/xbar.v \
+    ../../RTL/SNPC_cntrl.v \
+    ../../RTL/SNPC.v \
+    ../../RTL/SNPC_top.v \
+    ../../RTL/SNN_wrapper.v \
+    ../../RTL/SNN_top.v
+"
+
+add_files -norecurse -scan_for_includes $SNN_NODE
+
+set_property top SNN_top [current_fileset]
+
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse constraints.xdc
+
+set_property USED_IN {synthesis implementation out_of_context} \
+	[get_files constraints.xdc]
+
+# save area
+set_property strategy Flow_AreaOptimized_High [get_runs synth_1]
+# run synthesis
+synth_design -rtl -name rtl_1 -mode out_of_context \
+    -flatten_hierarchy full \
+    -gated_clock_conversion on -constrset constrs_1
+
+update_compile_order -fileset sources_1
+
+synth_design -rtl -name rtl_1 -mode out_of_context \
+    -flatten_hierarchy full \
+    -gated_clock_conversion on -constrset constrs_1
+
+set_property -name {STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS} -value {-mode out_of_context} -objects [get_runs synth_1]
+
+
+launch_runs synth_1
+wait_on_run synth_1
+
+open_run synth_1
+
+# create reports
+exec mkdir -p reports_${NAME}/
+exec rm -rf reports_${NAME}/*
+check_timing -file reports_${NAME}/snn.check_timing.rpt
+report_timing -max_paths 100 -nworst 100 -delay_type max -sort_by slack -file reports_${NAME}/snn.timing_WORST_100.rpt
+report_timing -nworst 1 -delay_type max -sort_by group -file reports_${NAME}/snn.timing.rpt
+report_utilization -hierarchical -file reports_${NAME}/snn.utilization.rpt
+
+# generate_target -verbose all [get_files SNN.runs/synth_1/]
+
+write_edif -force snn.edn
+write_verilog -force -mode synth_stub snn_stub.v
+write_verilog -force -mode funcsim snn_funcsim.v

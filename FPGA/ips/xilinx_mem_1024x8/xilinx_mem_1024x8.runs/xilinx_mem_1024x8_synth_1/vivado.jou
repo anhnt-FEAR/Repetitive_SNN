@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jul 17 16:09:34 2023
+# Process ID: 72207
+# Current directory: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/xilinx_mem_1024x8.runs/xilinx_mem_1024x8_synth_1
+# Command line: vivado -log xilinx_mem_1024x8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xilinx_mem_1024x8.tcl
+# Log file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/xilinx_mem_1024x8.runs/xilinx_mem_1024x8_synth_1/xilinx_mem_1024x8.vds
+# Journal file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/xilinx_mem_1024x8.runs/xilinx_mem_1024x8_synth_1/vivado.jou
+#-----------------------------------------------------------
+source xilinx_mem_1024x8.tcl -notrace

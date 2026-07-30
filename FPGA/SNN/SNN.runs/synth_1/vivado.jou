@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu Aug 31 09:25:29 2023
+# Process ID: 98746
+# Current directory: /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1
+# Command line: vivado -log SNN_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SNN_top.tcl
+# Log file: /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/SNN_top.vds
+# Journal file: /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source SNN_top.tcl -notrace

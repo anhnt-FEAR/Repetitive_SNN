@@ -1,0 +1,80 @@
+### pt_setup.tcl file              ###
+puts "RM-Info: Running script [info script]\n"
+### Start of PrimeTime Runtime Variables ###
+
+##########################################################################################
+# PrimeTime Variables PrimeTime Reference Methodology script
+# Script: pt_setup.tcl
+# Version: P-2019.03-SP3
+##########################################################################################
+
+######################################
+# Report and Results Directories
+######################################
+set REPORTS_DIR "reports"
+set RESULTS_DIR "results"
+
+
+######################################
+# Library and Design Setup
+######################################
+### Mode : Generic
+set search_path ". $ADDITIONAL_SEARCH_PATH $search_path"
+set target_library $TARGET_LIBRARY_FILES
+set link_path "* $target_library $ADDITIONAL_LINK_LIB_FILES"
+
+# Provide list of Verilog netlist files. It can be compressed --- example "A.v B.v C.v"
+set NETLIST_FILES               "../SYN/results/SNPC_top.mapped.v"
+# DESIGN_NAME is checked for existence from common_setup.tcl
+if {[string length $DESIGN_NAME] > 0} {
+} else {
+set DESIGN_NAME                   ""  ;#  The name of the top-level design
+}
+
+#######################################
+# Non-DMSA Power Analysis Setup Section
+#######################################
+
+# switching activity (VCD/SAIF) file 
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1234_8-bit_1111_memory.saif"
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1234_6-bit_0111_memory.saif"
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1234_4-bit_1001_memory.saif"
+#set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1236_8-bit_1111_memory.saif"
+#set ACTIVITY_FILE "../SIM/snpc_activities_SPIKE_IMG-1.saif"
+set ACTIVITY_FILE "../SIM/snpc_activities_SPIKE_IMG-1.vcd"
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1236_6-bit_0111_memory.saif"
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities_SPIKE_IMG-1236_4-bit_1001_memory.saif"
+# set ACTIVITY_FILE "../RTL_SIM/script/snpc_activities.vcd"
+
+# strip_path setting for the activity file
+set STRIP_PATH "/TB_SNPC_MNIST/DUT"
+
+## name map file
+set NAME_MAP_FILE ""
+
+######################################
+# Back Annotation File Section
+######################################
+# The recommended order is to put the block spefs first then the top so that block spefs are read 1st then top
+# For example 
+# PARASITIC_FILES "blk1.gpd blk2.gpd ... top.gpd"
+# PARASITIC_PATHS "u_blk1 u_blk2 ... top"
+# If you are loading the node coordinates by setting read_parasitics_load_locations true, it is more efficient
+# to read the top first so that block coordinates can be transformed as they are read in
+# Each PARASITIC_PATH entry corresponds to the related PARASITIC_FILE for the specific block"  
+# For toplevel PARASITIC file please use the toplevel design name in PARASITIC_PATHS variable."   
+set PARASITIC_FILES	 "" 
+set PARASITIC_PATHS	 "" 
+
+######################################
+# Constraint Section Setup
+######################################
+# set CONSTRAINT_FILES     "../SYNTH/output_files/SNPC_net.sdc"  
+set CONSTRAINT_FILES     ""
+
+######################################
+# End
+######################################
+
+### End of PrimeTime Runtime Variables ###
+puts "RM-Info: Completed script [info script]\n"

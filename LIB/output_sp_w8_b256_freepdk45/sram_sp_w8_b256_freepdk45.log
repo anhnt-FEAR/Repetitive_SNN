@@ -1,0 +1,86 @@
+|==============================================================================|
+|=========                      OpenRAM v1.1.13                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========        Temp dir: /tmp/openram_ikechukwu_16944_temp/        =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 04/18/2021 23:11:59
+Technology: freepdk45
+Total size: 2048 bits
+Word size: 8
+Words: 256
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 8
+Output files are: 
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.lvs
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.sp
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.v
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.lib
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.py
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.html
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.log
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.lef
+/home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.gds
+** Submodules: 2.9 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.1 seconds
+**** Analyzing pins: 1.1 seconds
+**** Finding blockages: 1.5 seconds
+**** Converting blockages: 0.0 seconds
+**** Converting pins: 2.5 seconds
+**** Separating adjacent pins: 1.0 seconds
+**** Enclosing pins: 1.0 seconds
+*** Finding pins and blockages: 7.2 seconds
+*** Maze routing supplies: 18.9 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 1.6 seconds
+**** Converting blockages: 0.4 seconds
+**** Converting pins: 0.1 seconds
+**** Separating adjacent pins: 0.0 seconds
+**** Enclosing pins: 0.0 seconds
+*** Finding pins and blockages: 2.1 seconds
+*** Maze routing pins: 7.5 seconds
+** Routing: 137.0 seconds
+** Verification: 0.0 seconds
+** SRAM creation: 139.9 seconds
+SP: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.sp
+** Spice writing: 0.2 seconds
+GDS: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.gds
+** GDS: 0.4 seconds
+LEF: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.lef
+** LEF: 14.3 seconds
+LVS: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+WARNING: file lib.py: line 627: Failed to retrieve git id
+
+WARNING: file lib.py: line 627: Failed to retrieve git id
+
+WARNING: file lib.py: line 627: Failed to retrieve git id
+
+WARNING: file lib.py: line 627: Failed to retrieve git id
+
+** Characterization: 0.9 seconds
+Config: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.py
+** Config: 0.0 seconds
+Datasheet: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.html
+** Datasheet: 0.0 seconds
+Verilog: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45.v
+** Verilog: 0.0 seconds
+Extended Config: Writing to /home/ikechukwu/Documents/Project/output_sp_w8_b256_freepdk45/sram_sp_w8_b256_freepdk45_extended.py
+** Extended Config: 0.0 seconds
+** End: 155.8 seconds

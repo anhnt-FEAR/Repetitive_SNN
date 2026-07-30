@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jul 17 16:09:26 2023
+# Process ID: 72153
+# Current directory: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8
+# Command line: vivado -mode batch -source tcl/run.tcl
+# Log file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/vivado.log
+# Journal file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/vivado.jou
+#-----------------------------------------------------------
+source tcl/run.tcl

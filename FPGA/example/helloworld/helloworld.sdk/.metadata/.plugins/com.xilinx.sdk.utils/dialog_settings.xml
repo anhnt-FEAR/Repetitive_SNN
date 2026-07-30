@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/home/doanh/Work/SNN_Stack_SRAM/fpga/example/helloworld/helloworld.sdk/helloworld_bsp_xuartps_hello_world_example_1/Debug" key="tcf_debug_app_selection"/>
+	<item value="/home/doanh/Work/SNN_Stack_SRAM/fpga/example/helloworld/helloworld.runs/impl_1" key="debug_files_selection"/>
+	<item value="/home/doanh/Work/SNN_Stack_SRAM/fpga/example/helloworld/helloworld.sdk/helloworld_bsp_xuartps_hello_world_example_1/Debug" key="last_stored_selection"/>
+</section>

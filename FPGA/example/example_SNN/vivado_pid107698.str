@@ -1,0 +1,272 @@
+/*
+
+Vivado v2017.1 (64-bit)
+SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+
+Process ID: 107698
+License: Customer
+
+Current time: 	7/25/23 12:34:07 AM JST
+Time zone: 	Japan Standard Time (Asia/Tokyo)
+
+OS: Manjaro Linux
+OS Version: 5.15.120-1-MANJARO
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: :1
+Screen size: 3840x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 2 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre
+JVM executable location: 	/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/bin/java
+Java library paths: /home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o:/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64:/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server:/home/doanh/Work/Xilinx/Vivado/2017.1/lnx64/tools/dot/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+
+User name: 	doanh
+User home directory: /home/doanh
+User working directory: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: /home/doanh/Work/Xilinx/Vivado
+HDI_APPROOT: /home/doanh/Work/Xilinx/Vivado/2017.1
+RDI_DATADIR: /home/doanh/Work/Xilinx/Vivado/2017.1/data
+RDI_BINDIR: /home/doanh/Work/Xilinx/Vivado/2017.1/bin
+
+User preferences location: /home/doanh/.Xilinx/Vivado
+Vivado preferences directory: /home/doanh/.Xilinx/Vivado/2017.1/vivado.xml
+Vivado layouts directory: /home/doanh/.Xilinx/Vivado/2017.1/layouts
+PlanAhead jar location: 	/home/doanh/Work/Xilinx/Vivado/2017.1/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	./.Xil/Vivado-107698-Doanh-Ngo
+
+GUI allocated memory:	242 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 1,165 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: example_SNN.xpr. Version: Vivado v2017.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 62 MB (+62266kb) [00:00:03]
+// [Engine Memory]: 950 MB (+845048kb) [00:00:03]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,005 MB (+6963kb) [00:00:04]
+// [Engine Memory]: 1,084 MB (+30480kb) [00:00:05]
+// Tcl Message: open_project example_SNN.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'. 
+// Tcl Message: ERROR: [Common 17-39] 'open_project' failed due to earlier errors. 
+// [Engine Memory]: 1,167 MB (+30835kb) [00:00:06]
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,178 MB. GUI used memory: 37 MB. Current time: 7/25/23 12:34:08 AM JST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a:a (cg:JFrame): Critical Messages: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,229 MB (+3415kb) [00:00:13]
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 28 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 3, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 3, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 1,234 MB. GUI used memory: 39 MB. Current time: 7/25/23 12:34:39 AM JST
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+// [GUI Memory]: 67 MB (+2558kb) [00:00:43]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top (snn_stub.v)]", 4, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top (snn_stub.v)]", 4, true, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as:g (cg:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, as:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Remove Sources"); // as:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_stub.v 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 72 MB (+1343kb) [00:00:53]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top (snn_funcsim.v)]", 4, true, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_IMPORT_ALL_SRCS, "Copy All Files Into Project"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_IMPORT_ALL_SRCS, "Copy All Files Into Project"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as:g (cg:JFrame): Remove Sources: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,254 MB. GUI used memory: 39 MB. Current time: 7/25/23 12:34:58 AM JST
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g:JCheckBox (JPanel:JComponent, as:g): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, as:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Remove Sources"); // as:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_funcsim.v 
+// Tcl Message: file delete -force /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_funcsim.v 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 78 MB (+2586kb) [00:01:03]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 4, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snn (snn.edn)]", 5, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, snn (snn.edn)]", 5, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as:g (cg:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, as:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Remove Sources"); // as:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn.edn 
+// Tcl Message: file delete -force /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn.edn 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3); // B:i (D:JPanel, cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 11, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 11, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+// [GUI Memory]: 82 MB (+392kb) [00:01:54]
+// Elapsed time: 73 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 11, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 11, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+// Elapsed time: 16 seconds
+selectButton(PAResourceQtoS.RunGadget_SHOW_ERROR, "2 errors"); // h:k (JPanel:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // B:JideButton (f:CommandBar, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 11, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+// [Engine Memory]: 1,291 MB (+108kb) [00:02:59]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, SNN_top_0]", 1, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// bs:g (cg:JFrame):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bs:g (cg:JFrame)
+// [GUI Memory]: 90 MB (+3313kb) [00:03:05]
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 2); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 3); // i:JideTabbedPane (N:aJ, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unreferenced]", 9); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unreferenced, SNN_top_0]", 10, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source File Properties..."); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unreferenced, SNN_top_0]", 10, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unreferenced, SNN_top_0]", 10, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Unreferenced, SNN_top_0]", 10, false); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 21 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs]", 2); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP]", 0); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP]", 0); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP]", 0, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, SNN_top_0]", 1, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, SNN_top_0]", 1, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i:JideTabbedPane (N:aJ, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 12); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), spike_rom_0 : design_1_spike_rom_0_0 (Module Reference Wrapper)]", 8, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), spike_rom_0 : design_1_spike_rom_0_0 (Module Reference Wrapper)]", 8, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HOptionPane Warning: ''design_1_spike_rom_0_0.xci' IP is part of a block design. Please open the block design 'design_1.bd' and customize the IP. (Re-customize IP)'
+selectButton("PAResourceQtoS.RecustomizeCore_THIS_IP_PART_OF_BLOCK_DESIGN_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bs:g (cg:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: open_bd_design {/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd} 
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M Adding cell -- user.org:module_ref:weight_l1_rom:1.0 - weight_l1_rom_0 Adding cell -- user.org:module_ref:weight_l2_rom:1.0 - weight_l2_rom_0 Adding cell -- user.org:module_ref:spike_rom:1.0 - spike_rom_0 Adding cell -- user.org:module_ref:SNN_top:1.0 - SNN_top_0 
+// Tcl Message: INFO: [BD 41-1728] Could not find a module with name: design_1_SNN_top_0_1  
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 1,365 MB (+9769kb) [00:03:56]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: Successfully read diagram <design_1> from BD file </home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: INFO: [BD 41-433]  Design successfully migrated to use XCI files... 
+// 'bv' command handler elapsed time: 3 seconds
+// a:a (cg:JFrame): Critical Messages: addNotify
+dismissDialog("Open Block Design"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,375 MB. GUI used memory: 50 MB. Current time: 7/25/23 12:37:59 AM JST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aF:FrameContainer (ContainerContainer:JideSplitPane, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), spike_rom_0 : design_1_spike_rom_0_0 (Module Reference Wrapper), design_1_spike_rom_0_0 (design_1_spike_rom_0_0.v), inst : spike_rom (spike_rom.v)]", 10, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), spike_rom_0 : design_1_spike_rom_0_0 (Module Reference Wrapper), design_1_spike_rom_0_0 (design_1_spike_rom_0_0.v), inst : spike_rom (spike_rom.v)]", 10, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), weight_l1_rom_0 : design_1_weight_l1_rom_0_0 (Module Reference Wrapper)]", 11); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), weight_l1_rom_0 : design_1_weight_l1_rom_0_0 (Module Reference Wrapper), design_1_weight_l1_rom_0_0 (design_1_weight_l1_rom_0_0.v), inst : weight_l1_rom (weight_l1_rom.v)]", 13, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), weight_l1_rom_0 : design_1_weight_l1_rom_0_0 (Module Reference Wrapper), design_1_weight_l1_rom_0_0 (design_1_weight_l1_rom_0_0.v), inst : weight_l1_rom (weight_l1_rom.v)]", 13, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// [GUI Memory]: 95 MB (+1284kb) [00:04:17]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 16, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SNN_top_0 (SNN_top_0.xci)]", 16, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 1,404 MB. GUI used memory: 46 MB. Current time: 7/25/23 12:38:23 AM JST
+// Elapsed time: 170 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// Elapsed time: 379 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), SNN_top_0 : xil_defaultlib.design_1_SNN_top_0_1]", 4, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c:g (cg:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (C:JPanel, c:g)
+setFileChooser("/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+// 'h' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: add_files -norecurse -scan_for_includes /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix 
+// c:g (cg:JFrame): Add Sources: addNotify
+// bs:g (c:g):  Add Sources  : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,419 MB. GUI used memory: 47 MB. Current time: 7/25/23 12:47:49 AM JST

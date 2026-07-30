@@ -1,0 +1,77 @@
+######################################################
+# Script for Cadence RTL Compiler synthesis      
+# Use with syn-rtl -f rtl-script
+######################################################
+
+# Set the search paths to the libraries and the HDL files
+# Remember that "." means your current directory. Add more directories
+# after the . if you like.  
+#set_db common_ui false
+
+set_attribute hdl_search_path {../RTL/} 
+set_attribute lib_search_path {../LIB/}
+set_attribute library [list typical.lib ../SRAM/sram_sp_w2_b256_freepdk45_TT_1p0V_25C.lib ../SRAM/sram_sp_w8_b256_freepdk45_TT_1p0V_25C.lib ../SRAM/sram_sp_w8_b1024_freepdk45_TT_1p0V_25C.lib]
+
+set_attribute information_level 6 
+
+set_attribute auto_ungroup none
+set myFiles [list common.v LIF.v LIF_neuron.v xbar.v SNPC_cntrl.v SNPC.v SNPC_top.v];# All HDL files 
+set basename SNPC_top     	 ;# name of top level module
+set myClk clk            ;# clock name
+set myPeriod_ps 10000    ;# Clock period in ps
+set myInDelay_ns .1       ;# delay from clock to inputs valid
+set myOutDelay_ns .1      ;# delay from clock to output valid
+set runname net          ;# name appended to output files
+
+#*********************************************************
+#*   below here shouldn't need to be changed...          *
+#*********************************************************
+
+# Analyze and Elaborate the HDL files
+read_hdl ${myFiles}
+elaborate ${basename}
+
+# Apply Constraints and generate clocks
+set clock [define_clock -period ${myPeriod_ps} -name ${myClk} [clock_ports]]	
+external_delay -input $myInDelay_ns -clock ${myClk} [find / -port ports_in/*]
+external_delay -output $myOutDelay_ns -clock ${myClk} [find / -port ports_out/*]
+
+# set_attribute lp_clock_gating_max_flops 18 ${basename}
+# set_attribute lp_clock_gating_min_flops 6 ${basename}
+
+# set_attribute dont_retime true [all::all_seqs -clock ${myClk}]
+# Sets transition to default values for Synopsys SDC format, 
+#fall/rise 400ps
+dc::set_clock_transition .4 $myClk
+
+# check that the design is OK so far
+check_design -unresolved
+report timing -lint
+
+# check_dft_rules
+# set_attribute retime true ${basename}
+# Synthesize the design to the target library
+# synthesize -to_mapped
+syn_generic 
+syn_map
+
+# set_attribute unmap_scan_flops true
+# retime -prepare
+# retime -min_delay ${basename}
+# report timing
+
+# replace_scan
+# connect_scan_chains -auto_create_chains
+# report clock_gating
+syn_opt
+
+# Write out the reports
+report timing > ./reports/${basename}_${runname}_timing.rep
+report gates  > ./reports/${basename}_${runname}_cell.rep
+report power  > ./reports/${basename}_${runname}_power.rep
+report area   > ./reports/${basename}_${runname}_area.rep
+
+# Write out the structural Verilog and sdc files
+write_hdl -mapped >  ./output_files/${basename}_${runname}.v
+write_sdc >  ./output_files/${basename}_${runname}.sdc
+write_sdf -design SNPC_top >  ./output_files/${basename}_${runname}.sdf

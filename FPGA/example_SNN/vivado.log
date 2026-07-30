@@ -1,0 +1,440 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed Aug 30 12:57:59 2023
+# Process ID: 30922
+# Current directory: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN
+# Command line: vivado
+# Log file: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/vivado.log
+# Journal file: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/example_SNN.xpr
+INFO: [Project 1-313] Project file moved from '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example_SNN' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- SNN:processor:SNN_top:1.0 - SNN_top_0
+Successfully read diagram <design_1> from BD file </home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd>
+update_compile_order -fileset sources_1
+close_project
+open_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.xpr
+INFO: [Project 1-313] Project file moved from '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0/SNN_top_0.xci', nor could it be found using path '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0/SNN_top_0.xci'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0_1/SNN_top_0.xci', nor could it be found using path '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0_1/SNN_top_0.xci'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_50M_0' generated file not found '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/stats.txt'. Please regenerate to continue.
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- user.org:module_ref:weight_l1_rom:1.0 - weight_l1_rom_0
+Adding cell -- user.org:module_ref:weight_l2_rom:1.0 - weight_l2_rom_0
+Adding cell -- user.org:module_ref:spike_rom:1.0 - spike_rom_0
+Adding cell -- SNN:processor:SNN_top:1.0 - SNN_top_1
+Successfully read diagram <design_1> from BD file </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd>
+update_compile_order -fileset sources_1
+validate_bd_design -force
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /SNN_top_1/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /SNN_top_1/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /SNN_top_1/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /SNN_top_1/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /SNN_top_1/s_axi(4) and /axi_smc/M00_AXI(0)
+save_bd_design
+Wrote  : </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hdl/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block spike_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l1_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l2_rom_0 .
+CRITICAL WARNING: [IP_Flow 19-4965] IP xilinx_mem_1024x8 was packaged with board value 'em.avnet.com:zed:part0:1.3'. Current project's board value is unset. Please update the project settings to match the packaged IP.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SNN_top_1 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Wed Aug 30 13:01:12 2023] Launched synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Wed Aug 30 13:01:44 2023] Launched impl_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/.Xil/Vivado-30922-Doanh-Ngo/dcp19/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/.Xil/Vivado-30922-Doanh-Ngo/dcp19/design_1_wrapper_board.xdc]
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/.Xil/Vivado-30922-Doanh-Ngo/dcp19/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/example_SNN/.Xil/Vivado-30922-Doanh-Ngo/dcp19/design_1_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 6715.758 ; gain = 2.000 ; free physical = 14828 ; free virtual = 33060
+Restored from archive | CPU: 0.130000 secs | Memory: 2.326569 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 6715.758 ; gain = 2.000 ; free physical = 14828 ; free virtual = 33060
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 15 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 6917.969 ; gain = 414.652 ; free physical = 14770 ; free virtual = 32998
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 7206.539 ; gain = 0.000 ; free physical = 14294 ; free virtual = 32523
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status
+validate_bd_design -force
+ERROR: [BD 41-1179] The following IPs in this design are locked. This command cannot be run until these IPs are unlocked. Please run report_ip_status for more details and a recommendation on how to fix this issue. 
+/SNN_top_1
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_project
+open_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ipx::package_project -root_dir /home/doanh/Work/SNN_Stack_SRAM -vendor SNN -library processor -taxonomy /BaseIP -force
+WARNING: [IP_Flow 19-1834] The constraints file "constraints.xdc" is added to the synthesis file group only, but will be used for both synthesis and implementation in the IP generation.
+WARNING: [IP_Flow 19-4656] Synthesis file group is packaged with a Dependency property value 'RTL' although it may not be recognized as a synthesis -include_dir property after IP delivery.
+WARNING: [IP_Flow 19-1983] Sub-designs of type 'Design Checkpoint' are not supported for project and block design packaging in this release. The source files are ignored.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "RTL/common.v" from the top-level HDL file.
+INFO: [IP_Flow 19-1842] HDL Parser: Found include file "RTL/LIF.v" from the top-level HDL file.
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst_n'.
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  /home/doanh/Work/SNN_Stack_SRAM [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/doanh/Work/SNN_Stack_SRAM' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.)
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core /home/doanh/Work/SNN_Stack_SRAM/SNN_processor_SNN_top_1.0.zip [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project
+open_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0/SNN_top_0.xci'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0_1/SNN_top_0.xci'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_50M_0' generated file not found '/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/stats.txt'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_SNN_top_1_0
+
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_ip_catalog -add_ip /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top.zip -repo_path /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN
+INFO: [IP_Flow 19-949] Unzipped '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top.zip' into repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- user.org:module_ref:weight_l1_rom:1.0 - weight_l1_rom_0
+Adding cell -- user.org:module_ref:weight_l2_rom:1.0 - weight_l2_rom_0
+Adding cell -- user.org:module_ref:spike_rom:1.0 - spike_rom_0
+Adding cell -- SNN:processor:SNN_top:1.0 - SNN_top_1
+Successfully read diagram <design_1> from BD file </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd>
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:SNN_top:1.0 SNN_top_0
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_smc_M00_AXI] [get_bd_nets spike_rom_0_svalid] [get_bd_nets spike_rom_0_spk_arry] [get_bd_nets SNN_top_1_o_start] [get_bd_nets weight_l1_rom_0_we] [get_bd_nets weight_l1_rom_0_addr_out] [get_bd_nets weight_l1_rom_0_data_out] [get_bd_nets weight_l1_rom_0_cs] [get_bd_nets weight_l1_rom_0_oe] [get_bd_nets weight_l2_rom_0_addr_out] [get_bd_nets weight_l2_rom_0_data_out] [get_bd_nets weight_l2_rom_0_cs] [get_bd_nets weight_l2_rom_0_we] [get_bd_nets weight_l2_rom_0_oe] [get_bd_cells SNN_top_1]
+set_property location {2.5 911 209} [get_bd_cells SNN_top_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/axi_smc" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins SNN_top_0/s_axi]
+</SNN_top_0/s_axi/reg0> is being mapped into </processing_system7_0/Data> at <0x40000000 [ 1G ]>
+connect_bd_net [get_bd_pins weight_l1_rom_0/data_out] [get_bd_pins SNN_top_0/data_1]
+connect_bd_net [get_bd_pins weight_l1_rom_0/addr_out] [get_bd_pins SNN_top_0/address_1]
+connect_bd_net [get_bd_pins weight_l1_rom_0/cs] [get_bd_pins SNN_top_0/cs_1]
+connect_bd_net [get_bd_pins weight_l1_rom_0/we] [get_bd_pins SNN_top_0/we_1]
+connect_bd_net [get_bd_pins weight_l1_rom_0/oe] [get_bd_pins SNN_top_0/oe_1]
+connect_bd_net [get_bd_pins weight_l2_rom_0/data_out] [get_bd_pins SNN_top_0/data_2]
+connect_bd_net [get_bd_pins weight_l2_rom_0/addr_out] [get_bd_pins SNN_top_0/address_2]
+connect_bd_net [get_bd_pins weight_l2_rom_0/cs] [get_bd_pins SNN_top_0/cs_2]
+connect_bd_net [get_bd_pins weight_l2_rom_0/we] [get_bd_pins SNN_top_0/we_2]
+connect_bd_net [get_bd_pins weight_l2_rom_0/oe] [get_bd_pins SNN_top_0/oe_2]
+connect_bd_net [get_bd_pins spike_rom_0/spk_arry] [get_bd_pins SNN_top_0/i_svalid]
+delete_bd_objs [get_bd_nets spike_rom_0_spk_arry]
+connect_bd_net [get_bd_pins spike_rom_0/spk_arry] [get_bd_pins SNN_top_0/i_spk_arry]
+connect_bd_net [get_bd_pins spike_rom_0/svalid] [get_bd_pins SNN_top_0/i_svalid]
+connect_bd_net [get_bd_pins SNN_top_0/o_start] [get_bd_pins spike_rom_0/i_start]
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+save_bd_design
+Wrote  : </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hdl/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block spike_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l1_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l2_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SNN_top_0 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Wed Aug 30 15:06:49 2023] Launched design_1_SNN_top_0_0_synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_0_0_synth_1/runme.log
+[Wed Aug 30 15:06:49 2023] Launched synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/synth_1/runme.log
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+make_wrapper -files [get_files /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd] -top
+set_property is_enabled false [get_files  /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v]
+update_compile_order -fileset sources_1
+remove_files  /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+file delete -force /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+make_wrapper -files [get_files /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files -norecurse /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+validate_bd_design -force
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property WUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property RUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /SNN_top_0/s_axi(4) and /axi_smc/M00_AXI(0)
+save_bd_design
+Wrote  : </home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run design_1_SNN_top_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hdl/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block spike_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l1_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block weight_l2_rom_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SNN_top_0 .
+Exporting to file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Wed Aug 30 15:10:54 2023] Launched design_1_SNN_top_0_0_synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_0_0_synth_1/runme.log
+[Wed Aug 30 15:10:54 2023] Launched synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/synth_1/runme.log
+open_bd_design {/home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+reset_run design_1_SNN_top_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Wed Aug 30 15:13:45 2023] Launched design_1_SNN_top_0_0_synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_0_0_synth_1/runme.log
+[Wed Aug 30 15:13:45 2023] Launched synth_1...
+Run output will be captured here: /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/synth_1/runme.log
+report_ip_status -name ip_status 
+set_property is_enabled false [get_files  /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_0_0_1/synth/design_1_SNN_top_0_0.v]
+ipx::edit_ip_in_project -upgrade true -name SNN_top_v1_0_v1_0_project -directory /home/doanh/Work/SNN_Stack_SRAM/FPGA/example/example_SNN/example_SNN.tmp/SNN_top_v1_0_v1_0_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/component.xml
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst_n' as interface 'rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+INFO: [Ipptcl 7-560] Setting top module name 'axi_slave_if' for file group 'xilinx_anylanguagebehavioralsimulation'.
+INFO: [Ipptcl 7-560] Setting top module name 'axi_slave_if' for file group 'xilinx_anylanguagesynthesis'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/LIF.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/common.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/LIF_neuron.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/SNPC.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/SNPC_cntrl.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/SNPC_head.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/xbar.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top/RTL/SNN_top.v'.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+CRITICAL WARNING: [IP_Flow 19-4646] Synthesis file 'FPGA/SNN/constraints.xdc' is packaged with isInclude property although it may not be recognized as a synthesis IS_GLOBAL_INCLUDE after IP delivery.
+CRITICAL WARNING: [IP_Flow 19-4646] Synthesis file 'RTL/axi_slave_if.sv' is packaged with isInclude property although it may not be recognized as a synthesis IS_GLOBAL_INCLUDE after IP delivery.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/SNN_top.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/xbar.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/SNPC_head.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/SNPC_cntrl.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/SNPC.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/LIF_neuron.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/common.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagesynthesis (Synthesis)'': File 'RTL/LIF.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/SNN_top.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/xbar.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/SNPC_head.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/SNPC_cntrl.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/SNPC.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/LIF_neuron.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/common.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5110] 'File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)'': File 'RTL/LIF.v' is not found in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+CRITICAL WARNING: [IP_Flow 19-4834] IP port (clk) was removed from the interface 'clk'. Please review the IP interface 'clk'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's_axi_aclk' as interface 's_axi_aclk'.
+INFO: [IP_Flow 19-4728] Bus Interface 's_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's_axi_aresetn'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+close_project
+reset_run design_1_SNN_top_0_0_synth_1
+reset_run synth_1
+update_ip_catalog -delete_ip user.org:user:SNN_top:1.0 -repo_path /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN
+INFO: [IP_Flow 19-1659] Deleted IP 'user.org:user:SNN_top:1.0' from repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN' at /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN_top.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_project
+open_project /home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/doanh/Work/SNN_Stack_SRAM' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /home/doanh/Work/SNN_Stack_SRAM/component.xml
+WARNING: [IP_Flow 19-4656] Synthesis file group is packaged with a Dependency property value 'RTL' although it may not be recognized as a synthesis -include_dir property after IP delivery.
+WARNING: [IP_Flow 19-1983] Sub-designs of type 'Design Checkpoint' are not supported for project and block design packaging in this release. The source files are ignored.
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/doanh/Work/SNN_Stack_SRAM
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/doanh/Work/SNN_Stack_SRAM'

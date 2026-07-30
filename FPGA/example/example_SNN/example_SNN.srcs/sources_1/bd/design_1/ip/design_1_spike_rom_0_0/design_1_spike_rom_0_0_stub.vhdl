@@ -1,0 +1,34 @@
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+-- Date        : Mon Jul 24 17:17:40 2023
+-- Host        : Doanh-Ngo running 64-bit Manjaro Linux
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_spike_rom_0_0/design_1_spike_rom_0_0_stub.vhdl
+-- Design      : design_1_spike_rom_0_0
+-- Purpose     : Stub declaration of top-level module interface
+-- Device      : xc7z020clg484-1
+-- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity design_1_spike_rom_0_0 is
+  Port ( 
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    i_start : in STD_LOGIC;
+    spk_arry : out STD_LOGIC_VECTOR ( 783 downto 0 );
+    svalid : out STD_LOGIC
+  );
+
+end design_1_spike_rom_0_0;
+
+architecture stub of design_1_spike_rom_0_0 is
+attribute syn_black_box : boolean;
+attribute black_box_pad_pin : string;
+attribute syn_black_box of stub : architecture is true;
+attribute black_box_pad_pin of stub : architecture is "clk,rst_n,i_start,spk_arry[783:0],svalid";
+attribute X_CORE_INFO : string;
+attribute X_CORE_INFO of stub : architecture is "spike_rom,Vivado 2017.1";
+begin
+end;

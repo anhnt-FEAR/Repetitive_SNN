@@ -1,0 +1,114 @@
+-makelib ies/xil_defaultlib -sv \
+  "/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
+  "/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+-endlib
+-makelib ies/xpm \
+  "/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
+-makelib ies/axi_infrastructure_v1_1_0 \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib ies/xil_common_vip_v1_0_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/2ad9/hdl/xil_common_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/16a2/hdl/sc_util_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/axi_protocol_checker_v1_1_13 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/8017/hdl/axi_protocol_checker_v1_1_vl_rfs.sv" \
+-endlib
+-makelib ies/axi_vip_v1_0_1 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/856d/hdl/axi_vip_v1_0_vl_rfs.sv" \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/d5eb/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/hdl/bd_afc3.v" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/aa1d/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_s00a2s_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/d148/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_m00s2a_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/986a/hdl/sc_exit_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_m00e_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/879e/hdl/sc_node_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_sarn_0.sv" \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_srn_0.sv" \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_sawn_0.sv" \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_swn_0.sv" \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_sbn_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/5300/hdl/sc_mmu_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_s00mmu_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/3d93/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_s00tr_0.sv" \
+-endlib
+-makelib ies/smartconnect_v1_0 -sv \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/cc66/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_s00sic_0.sv" \
+-endlib
+-makelib ies/xlconstant_v1_1_3 \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
+-endlib
+-makelib ies/lib_cdc_v1_0_2 \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib ies/proc_sys_reset_v5_0_11 \
+  "../../../../example_SNN.srcs/sources_1/bd/design_1/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/sim/bd_afc3_psr_aclk_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/hdl/design_1.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/LIF_neuron.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/SNN_wrapper.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/SNPC.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/SNPC_cntrl.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/SNPC_top.v" \
+  "../../../bd/design_1/ipshared/4555/RTL/xbar.v" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/design_1/ipshared/4555/RTL/axi_slave_if.sv" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_SNN_top_0_0/sim/design_1_SNN_top_0_0.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  glbl.v
+-endlib
+

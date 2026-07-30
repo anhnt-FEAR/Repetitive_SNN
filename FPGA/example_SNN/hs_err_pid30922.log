@@ -1,0 +1,11 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x923da9) [0x7fc622923da9]
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xb6) [0x7fc62292a3f6]
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x9209d3) [0x7fc6229209d3]
+/usr/lib/libc.so.6(+0x3e710) [0x7fc660df1710]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_coregen.so(HACGIPRepoCfgImp::getRepositories_(HSTVector<HACGIPRepository*, std::allocator<HACGIPRepository*> >&)+0x15) [0x7fc64f32fb35]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_coregen.so(Java_ui_data_coregen_packagerEngine_IPRepositoryConfiguration_1getRepositories+0x1f) [0x7fc64f0f538f]
+[0x7fc6124173f4]

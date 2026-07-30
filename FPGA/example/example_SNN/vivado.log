@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Tue Jul 25 00:33:56 2023
+# Process ID: 107698
+# Current directory: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN
+# Command line: vivado example_SNN.xpr
+# Log file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/vivado.log
+# Journal file: /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project example_SNN.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/ip/SNN_top_0/SNN_top_0.xci'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/doanh/Work/Xilinx/Vivado/2017.1/data/ip'.
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'SNN_top_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+WARNING: [Project 1-533] File '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_weight_l2_rom_0_0/ip/design_1_SNN_top_0_1/design_1_SNN_top_0_1.xci' could not be found in the subdesign '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd', but fileset 'design_1_SNN_top_0_1' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+update_compile_order -fileset sources_1
+remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_stub.v
+remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_funcsim.v
+file delete -force /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn_funcsim.v
+remove_files  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn.edn
+file delete -force /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/imports/SNN/snn.edn
+report_ip_status -name ip_status 
+open_bd_design {/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- user.org:module_ref:weight_l1_rom:1.0 - weight_l1_rom_0
+Adding cell -- user.org:module_ref:weight_l2_rom:1.0 - weight_l2_rom_0
+Adding cell -- user.org:module_ref:spike_rom:1.0 - spike_rom_0
+Adding cell -- user.org:module_ref:SNN_top:1.0 - SNN_top_0
+INFO: [BD 41-1728] Could not find a module with name: design_1_SNN_top_0_1 
+WARNING: [IP_Flow 19-3571] IP 'design_1_SNN_top_0_0' is restricted:
+* Module reference source file(s) not found.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/SNN_top_0'.
+Given inputs for module-source, Top-module name : SNN_top, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Successfully read diagram <design_1> from BD file </home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/design_1.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+add_files -norecurse -scan_for_includes /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix
+CRITICAL WARNING: [IP_Flow 19-3389] Failed to import IP file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1/SNN_top_0.xci': Could not find IP file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1/SNN_top_0.xci'.
+
+CRITICAL WARNING: [Vivado 12-1464] The source file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix' cannot be added to the fileset 'sources_1'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 6356.105 ; gain = 0.004 ; free physical = 1738 ; free virtual = 17183
+import_files -norecurse /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix
+CRITICAL WARNING: [IP_Flow 19-3389] Failed to import IP file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1/SNN_top_0.xci': Could not find IP file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1/SNN_top_0.xci'.
+
+CRITICAL WARNING: [filemgmt 20-984] The source file '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/SNN_top_0_1.xcix' cannot be added to the fileset 'sources_1'.

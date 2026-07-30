@@ -1,0 +1,299 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Wed Aug 30 14:53:41 2023
+| Host         : Doanh-Ngo running 64-bit Manjaro Linux
+| Command      : report_timing -nworst 1 -delay_type max -sort_by group -file reports_SNN/snn.timing.rpt
+| Design       : SNN_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[4]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        83.184ns  (logic 17.029ns (20.472%)  route 66.155ns (79.529%))
+  Logic Levels:           134  (FDRE=1 LUT3=2 LUT4=12 LUT5=22 LUT6=97)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry_reg[1]/C
+                         FDRE (Prop_fdre_C_Q)         0.518     0.518 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry_reg[1]/Q
+                         net (fo=11, unplaced)        0.787     1.305    SNN0/SNPC_top0/SNPC0/XBAR0/p_1_in
+                         LUT4 (Prop_lut4_I1_O)        0.295     1.600 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[7]_i_2/O
+                         net (fo=8, unplaced)         0.487     2.087    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[7]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.116     2.203 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[11]_i_2/O
+                         net (fo=8, unplaced)         0.487     2.690    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[11]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     2.814 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[19]_i_2/O
+                         net (fo=13, unplaced)        0.499     3.313    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[19]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.437 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[37]_i_3/O
+                         net (fo=15, unplaced)        0.502     3.939    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[37]_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.063 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[50]_i_2/O
+                         net (fo=11, unplaced)        0.495     4.558    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[50]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     4.682 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[64]_i_4/O
+                         net (fo=18, unplaced)        0.506     5.188    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[64]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     5.312 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[67]_i_2/O
+                         net (fo=9, unplaced)         0.490     5.802    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[67]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     5.926 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[82]_i_2/O
+                         net (fo=12, unplaced)        0.497     6.423    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[82]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.547 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[98]_i_3/O
+                         net (fo=2, unplaced)         0.460     7.007    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[98]_i_3_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     7.131 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[98]_i_2/O
+                         net (fo=13, unplaced)        0.499     7.630    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[98]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     7.754 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[110]_i_3/O
+                         net (fo=2, unplaced)         0.460     8.214    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[110]_i_3_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     8.338 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[110]_i_2/O
+                         net (fo=7, unplaced)         0.484     8.822    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[110]_i_2_n_0
+                         LUT3 (Prop_lut3_I2_O)        0.116     8.938 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[113]_i_2/O
+                         net (fo=10, unplaced)        0.492     9.430    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[113]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     9.554 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[123]_i_3/O
+                         net (fo=1, unplaced)         0.449    10.003    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[123]_i_3_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    10.127 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[123]_i_2/O
+                         net (fo=11, unplaced)        0.495    10.622    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[123]_i_2_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.124    10.746 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[130]_i_2/O
+                         net (fo=11, unplaced)        0.495    11.241    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[130]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.365 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[138]_i_2/O
+                         net (fo=15, unplaced)        0.502    11.867    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[138]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    11.991 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[143]_i_2/O
+                         net (fo=9, unplaced)         0.490    12.481    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[143]_i_2_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124    12.605 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[147]_i_2/O
+                         net (fo=6, unplaced)         0.481    13.086    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[147]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.210 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[160]_i_4/O
+                         net (fo=1, unplaced)         0.449    13.659    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[160]_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    13.783 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[160]_i_3/O
+                         net (fo=10, unplaced)        0.492    14.275    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[160]_i_3_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124    14.399 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[163]_i_2/O
+                         net (fo=7, unplaced)         0.484    14.883    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[163]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    15.007 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[170]_i_2/O
+                         net (fo=5, unplaced)         0.477    15.484    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[170]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    15.608 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[178]_i_2/O
+                         net (fo=9, unplaced)         0.490    16.098    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[178]_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.116    16.214 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[179]_i_2/O
+                         net (fo=2, unplaced)         0.460    16.674    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[179]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    16.798 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[189]_i_2/O
+                         net (fo=12, unplaced)        0.497    17.295    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[189]_i_2_n_0
+                         LUT5 (Prop_lut5_I2_O)        0.124    17.419 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[193]_i_2/O
+                         net (fo=9, unplaced)         0.490    17.909    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[193]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    18.033 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[196]_i_2/O
+                         net (fo=9, unplaced)         0.490    18.523    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[196]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    18.647 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[203]_i_2/O
+                         net (fo=11, unplaced)        0.495    19.142    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[203]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    19.266 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[208]_i_2/O
+                         net (fo=5, unplaced)         0.477    19.743    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[208]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.116    19.859 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[216]_i_3/O
+                         net (fo=15, unplaced)        0.502    20.361    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[216]_i_3_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    20.485 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[222]_i_2/O
+                         net (fo=3, unplaced)         0.467    20.952    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[222]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    21.076 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[231]_i_2/O
+                         net (fo=6, unplaced)         0.481    21.557    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[231]_i_2_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.124    21.681 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[234]_i_2/O
+                         net (fo=9, unplaced)         0.490    22.171    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[234]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    22.295 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[239]_i_2/O
+                         net (fo=10, unplaced)        0.492    22.787    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[239]_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.124    22.911 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[242]_i_2/O
+                         net (fo=10, unplaced)        0.492    23.403    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[242]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    23.527 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[248]_i_2/O
+                         net (fo=12, unplaced)        0.497    24.024    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[248]_i_2_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.124    24.148 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[258]_i_2/O
+                         net (fo=12, unplaced)        0.497    24.645    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[258]_i_2_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.124    24.769 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[262]_i_2/O
+                         net (fo=9, unplaced)         0.490    25.259    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[262]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    25.383 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[267]_i_2/O
+                         net (fo=9, unplaced)         0.490    25.873    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[267]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    25.997 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[271]_i_2/O
+                         net (fo=3, unplaced)         0.467    26.464    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[271]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    26.588 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[279]_i_2/O
+                         net (fo=6, unplaced)         0.481    27.069    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[279]_i_2_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.116    27.185 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[282]_i_2/O
+                         net (fo=17, unplaced)        0.505    27.690    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[282]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    27.814 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[287]_i_2/O
+                         net (fo=9, unplaced)         0.490    28.304    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[287]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    28.428 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[300]_i_5/O
+                         net (fo=2, unplaced)         0.460    28.888    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[300]_i_5_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    29.012 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[300]_i_2/O
+                         net (fo=7, unplaced)         0.484    29.496    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[300]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    29.620 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[306]_i_2/O
+                         net (fo=11, unplaced)        0.495    30.115    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[306]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    30.239 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[315]_i_3/O
+                         net (fo=3, unplaced)         0.467    30.706    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[315]_i_3_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.116    30.822 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[315]_i_2/O
+                         net (fo=7, unplaced)         0.484    31.306    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[315]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    31.430 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[324]_i_2/O
+                         net (fo=4, unplaced)         0.473    31.903    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[324]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    32.027 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[330]_i_2/O
+                         net (fo=9, unplaced)         0.490    32.517    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[330]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    32.641 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[335]_i_2/O
+                         net (fo=10, unplaced)        0.492    33.133    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[335]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    33.257 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[344]_i_4/O
+                         net (fo=13, unplaced)        0.499    33.756    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[344]_i_4_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    33.880 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[346]_i_2/O
+                         net (fo=14, unplaced)        0.500    34.380    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[346]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    34.504 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[358]_i_3/O
+                         net (fo=1, unplaced)         0.449    34.953    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[358]_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    35.077 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[358]_i_2/O
+                         net (fo=11, unplaced)        0.495    35.572    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[358]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    35.696 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[362]_i_2/O
+                         net (fo=5, unplaced)         0.477    36.173    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[362]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    36.297 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[371]_i_2/O
+                         net (fo=15, unplaced)        0.502    36.799    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[371]_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.116    36.915 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[372]_i_2/O
+                         net (fo=2, unplaced)         0.460    37.375    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[372]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    37.499 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[380]_i_2/O
+                         net (fo=5, unplaced)         0.477    37.976    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[380]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    38.100 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[394]_i_3/O
+                         net (fo=1, unplaced)         0.449    38.549    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[394]_i_3_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    38.673 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[394]_i_2/O
+                         net (fo=12, unplaced)        0.497    39.170    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[394]_i_2_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.116    39.286 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[402]_i_2/O
+                         net (fo=10, unplaced)        0.492    39.778    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[402]_i_2_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.116    39.894 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[406]_i_2/O
+                         net (fo=9, unplaced)         0.490    40.384    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[406]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    40.508 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[411]_i_2/O
+                         net (fo=7, unplaced)         0.484    40.992    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[411]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    41.116 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[420]_i_3/O
+                         net (fo=12, unplaced)        0.497    41.613    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[420]_i_3_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    41.737 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[423]_i_2/O
+                         net (fo=13, unplaced)        0.499    42.236    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[423]_i_2_n_0
+                         LUT3 (Prop_lut3_I2_O)        0.116    42.352 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[432]_i_4/O
+                         net (fo=1, unplaced)         0.449    42.801    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[432]_i_4_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    42.925 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[432]_i_2/O
+                         net (fo=15, unplaced)        0.502    43.427    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[432]_i_2_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.116    43.543 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[435]_i_2/O
+                         net (fo=13, unplaced)        0.499    44.042    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[435]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    44.166 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[440]_i_2/O
+                         net (fo=7, unplaced)         0.484    44.650    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[440]_i_2_n_0
+                         LUT5 (Prop_lut5_I2_O)        0.116    44.766 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[445]_i_2/O
+                         net (fo=8, unplaced)         0.487    45.253    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[445]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    45.377 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[459]_i_3/O
+                         net (fo=6, unplaced)         0.481    45.858    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[459]_i_3_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    45.982 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[469]_i_6/O
+                         net (fo=6, unplaced)         0.481    46.463    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[469]_i_6_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124    46.587 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[465]_i_2/O
+                         net (fo=9, unplaced)         0.490    47.077    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[465]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    47.201 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[479]_i_5/O
+                         net (fo=4, unplaced)         0.473    47.674    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[479]_i_5_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    47.798 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[479]_i_2/O
+                         net (fo=6, unplaced)         0.481    48.279    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[479]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    48.403 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[482]_i_2/O
+                         net (fo=5, unplaced)         0.477    48.880    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[482]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    49.004 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[496]_i_3/O
+                         net (fo=7, unplaced)         0.484    49.488    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[496]_i_3_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.116    49.604 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[495]_i_2/O
+                         net (fo=11, unplaced)        0.495    50.099    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[495]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    50.223 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[499]_i_2/O
+                         net (fo=5, unplaced)         0.477    50.700    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[499]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    50.824 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[510]_i_3/O
+                         net (fo=16, unplaced)        0.503    51.327    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[510]_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    51.451 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[519]_i_4/O
+                         net (fo=1, unplaced)         0.449    51.900    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[519]_i_4_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    52.024 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[519]_i_2/O
+                         net (fo=10, unplaced)        0.492    52.516    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[519]_i_2_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.124    52.640 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[522]_i_2/O
+                         net (fo=15, unplaced)        0.502    53.142    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[522]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    53.266 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[531]_i_2/O
+                         net (fo=2, unplaced)         0.460    53.726    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[531]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    53.850 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[535]_i_2/O
+                         net (fo=3, unplaced)         0.467    54.317    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[535]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    54.441 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[539]_i_2/O
+                         net (fo=6, unplaced)         0.481    54.922    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[539]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    55.046 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[544]_i_2/O
+                         net (fo=6, unplaced)         0.481    55.527    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[544]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    55.651 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[551]_i_2/O
+                         net (fo=8, unplaced)         0.487    56.138    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[551]_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.116    56.254 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[556]_i_2/O
+                         net (fo=16, unplaced)        0.503    56.757    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[556]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    56.881 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[562]_i_2/O
+                         net (fo=7, unplaced)         0.484    57.365    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[562]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    57.489 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[567]_i_2/O
+                         net (fo=10, unplaced)        0.492    57.981    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[567]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    58.105 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[574]_i_2/O
+                         net (fo=6, unplaced)         0.481    58.586    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[574]_i_2_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.116    58.702 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[576]_i_2/O
+                         net (fo=6, unplaced)         0.481    59.183    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[576]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    59.307 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[580]_i_2/O
+                         net (fo=3, unplaced)         0.467    59.774    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[580]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    59.898 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[587]_i_2/O
+                         net (fo=8, unplaced)         0.487    60.385    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[587]_i_2_n_0
+                         LUT5 (Prop_lut5_I2_O)        0.116    60.501 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[591]_i_2/O
+                         net (fo=9, unplaced)         0.490    60.991    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[591]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    61.115 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[596]_i_2/O
+                         net (fo=4, unplaced)         0.473    61.588    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[596]_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    61.712 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[602]_i_2/O
+                         net (fo=13, unplaced)        0.499    62.211    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[602]_i_2_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    62.335 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[619]_i_3/O
+                         net (fo=1, unplaced)         0.449    62.784    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[619]_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    62.908 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[619]_i_2/O
+                         net (fo=5, unplaced)         0.477    63.385    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[619]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    63.509 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[624]_i_4/O
+                         net (fo=14, unplaced)        0.500    64.009    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[624]_i_4_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    64.133 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[631]_i_2/O
+                         net (fo=9, unplaced)         0.490    64.623    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[631]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    64.747 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[639]_i_2/O
+                         net (fo=13, unplaced)        0.499    65.246    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[639]_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.116    65.362 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[640]_i_2/O
+                         net (fo=4, unplaced)         0.473    65.835    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[640]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    65.959 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[655]_i_3/O
+                         net (fo=3, unplaced)         0.467    66.426    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[655]_i_3_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    66.550 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[655]_i_2/O
+                         net (fo=9, unplaced)         0.490    67.040    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[655]_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    67.164 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[660]_i_2/O
+                         net (fo=8, unplaced)         0.487    67.651    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[660]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    67.775 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[667]_i_2/O
+                         net (fo=11, unplaced)        0.495    68.270    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[667]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    68.394 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[678]_i_3/O
+                         net (fo=1, unplaced)         0.449    68.843    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[678]_i_3_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    68.967 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[678]_i_2/O
+                         net (fo=6, unplaced)         0.481    69.448    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[678]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.116    69.564 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[683]_i_2/O
+                         net (fo=13, unplaced)        0.499    70.063    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[683]_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    70.187 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[687]_i_2/O
+                         net (fo=11, unplaced)        0.495    70.682    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[687]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    70.806 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[694]_i_2/O
+                         net (fo=8, unplaced)         0.487    71.293    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[694]_i_2_n_0
+                         LUT4 (Prop_lut4_I1_O)        0.124    71.417 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[696]_i_2/O
+                         net (fo=7, unplaced)         0.484    71.901    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[696]_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    72.025 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[713]_i_4/O
+                         net (fo=3, unplaced)         0.467    72.492    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[713]_i_4_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    72.616 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[713]_i_2/O
+                         net (fo=7, unplaced)         0.484    73.100    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[713]_i_2_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.116    73.216 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[716]_i_2/O
+                         net (fo=7, unplaced)         0.484    73.700    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[716]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    73.824 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[735]_i_4/O
+                         net (fo=2, unplaced)         0.460    74.284    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[735]_i_4_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    74.408 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[735]_i_3/O
+                         net (fo=15, unplaced)        0.502    74.910    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[735]_i_3_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    75.034 f  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[736]_i_2/O
+                         net (fo=11, unplaced)        0.495    75.529    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[736]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    75.653 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[743]_i_2/O
+                         net (fo=19, unplaced)        0.508    76.161    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[743]_i_2_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    76.285 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[759]_i_4/O
+                         net (fo=3, unplaced)         0.467    76.752    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[759]_i_4_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    76.876 r  SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[759]_i_2/O
+                         net (fo=11, unplaced)        0.495    77.371    SNN0/SNPC_top0/SNPC0/XBAR0/r_spk_arry[759]_i_2_n_0
+                         LUT4 (Prop_lut4_I2_O)        0.124    77.495 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_412/O
+                         net (fo=1, unplaced)         1.111    78.606    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_412_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    78.730 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_363/O
+                         net (fo=1, unplaced)         0.665    79.395    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_363_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    79.519 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_295/O
+                         net (fo=1, unplaced)         0.449    79.968    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_295_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    80.092 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_233/O
+                         net (fo=1, unplaced)         0.449    80.541    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_233_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    80.665 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_163/O
+                         net (fo=1, unplaced)         0.449    81.114    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_163_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    81.238 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_101/O
+                         net (fo=1, unplaced)         0.449    81.687    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_101_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    81.811 f  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_48/O
+                         net (fo=1, unplaced)         0.449    82.260    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_48_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124    82.384 r  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0_i_11/O
+                         net (fo=48, unplaced)        0.800    83.184    SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[0]
+                         RAMB18E1                                     r  SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+
+
+

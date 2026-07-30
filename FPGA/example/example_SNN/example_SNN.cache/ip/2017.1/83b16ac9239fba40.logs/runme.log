@@ -1,0 +1,1371 @@
+
+*** Running vivado
+    with args -log design_1_SNN_top_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_SNN_top_1_0.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_SNN_top_1_0.tcl -notrace
+Command: synth_design -top design_1_SNN_top_1_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 111614 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1150.094 ; gain = 71.000 ; free physical = 148 ; free virtual = 15251
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_SNN_top_1_0' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/synth/design_1_SNN_top_1_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'SNN_top' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNN_top.v:4]
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter AXI4_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_USER_WIDTH bound to: 4 - type: integer 
+	Parameter AXI4_ID_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_slave_if' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:11]
+	Parameter AXI4_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_USER_WIDTH bound to: 4 - type: integer 
+	Parameter AXI4_ID_WIDTH bound to: 16 - type: integer 
+	Parameter OFFSET_BIT bound to: 2 - type: integer 
+	Parameter ADDR_CMP bound to: 0 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:328]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:551]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:563]
+WARNING: [Synth 8-6014] Unused sequential element countburst_AW_CS_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:292]
+WARNING: [Synth 8-6014] Unused sequential element countburst_AW_NS_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:321]
+INFO: [Synth 8-256] done synthesizing module 'axi_slave_if' (1#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:11]
+INFO: [Synth 8-638] synthesizing module 'SNPC_head' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC_head.v:4]
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SNPC' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LIF_neuron' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/LIF_neuron.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+WARNING: [Synth 8-3848] Net TBD in module/entity LIF_neuron does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/LIF_neuron.v:24]
+INFO: [Synth 8-256] done synthesizing module 'LIF_neuron' (2#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/LIF_neuron.v:9]
+INFO: [Synth 8-638] synthesizing module 'SNPC_cntrl' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC_cntrl.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SNPC_cntrl' (3#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC_cntrl.v:9]
+INFO: [Synth 8-638] synthesizing module 'xbar' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'xilinx_mem_1024x8' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/SNN.srcs/sources_1/ip/xilinx_mem_1024x8/synth/xilinx_mem_1024x8.vhd:71]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: xilinx_mem_1024x8.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.35805 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_6' declared at '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/SNN.srcs/sources_1/ip/xilinx_mem_1024x8/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:195260' bound to instance 'U0' of component 'blk_mem_gen_v8_3_6' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/SNN.srcs/sources_1/ip/xilinx_mem_1024x8/synth/xilinx_mem_1024x8.vhd:234]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'xilinx_mem_1024x8' (12#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/SNN.srcs/sources_1/ip/xilinx_mem_1024x8/synth/xilinx_mem_1024x8.vhd:71]
+WARNING: [Synth 8-3848] Net TBD in module/entity xbar does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:35]
+INFO: [Synth 8-256] done synthesizing module 'xbar' (13#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:9]
+WARNING: [Synth 8-3848] Net w_LB_done in module/entity SNPC does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:58]
+INFO: [Synth 8-256] done synthesizing module 'SNPC' (14#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:9]
+INFO: [Synth 8-638] synthesizing module 'SNPC__parameterized0' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'xbar__parameterized0' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+WARNING: [Synth 8-3848] Net TBD in module/entity xbar__parameterized0 does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:35]
+INFO: [Synth 8-256] done synthesizing module 'xbar__parameterized0' (14#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/xbar.v:9]
+WARNING: [Synth 8-3848] Net w_LB_done in module/entity SNPC__parameterized0 does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:58]
+INFO: [Synth 8-256] done synthesizing module 'SNPC__parameterized0' (14#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC.v:9]
+INFO: [Synth 8-256] done synthesizing module 'SNPC_head' (15#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNPC_head.v:4]
+WARNING: [Synth 8-689] width (32) of port connection 'o_spike' does not match port width (10) of module 'SNPC_head' [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNN_top.v:221]
+WARNING: [Synth 8-3848] Net s_axi_aclk in module/entity SNN_top does not have driver. [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNN_top.v:206]
+INFO: [Synth 8-256] done synthesizing module 'SNN_top' (16#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNN_top.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_SNN_top_1_0' (17#1) [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/synth/design_1_SNN_top_1_0.v:56]
+WARNING: [Synth 8-3331] design LIF_neuron has unconnected port TBD
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ENB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port REGCEB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SLEEP
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ECCPIPECE
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ram_rstram_b
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ram_rstreg_b
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port REGCEA[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port REGCEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[0]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[9]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[8]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port REGCEA
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port RSTB
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ENB
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port REGCEB
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[9]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[8]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[7]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[6]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[5]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[4]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[3]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[2]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[1]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port ADDRB[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[7]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[6]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[5]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[4]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[3]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[2]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[1]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port DINB[0]
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_input_block has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AClk
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AXI_AWID[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AXI_AWID[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AXI_AWID[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AXI_AWID[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_v8_3_6_synth has unconnected port S_AXI_AWADDR[31]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1353.266 ; gain = 274.172 ; free physical = 335 ; free virtual = 15214
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SNPC_head0:clk to constant 0 [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/SNN_top.v:204]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1353.266 ; gain = 274.172 ; free physical = 339 ; free virtual = 15217
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/constraints.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ip/design_1_SNN_top_1_0/constraints.xdc] for cell 'inst'
+Parsing XDC File [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1632.305 ; gain = 1.000 ; free physical = 156 ; free virtual = 14924
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 276 ; free virtual = 15044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 276 ; free virtual = 15044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_1_0_synth_1/dont_touch.xdc, line 14).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[0].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[10].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[11].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[12].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[13].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[14].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[15].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[16].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[17].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[18].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[19].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[1].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[20].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[21].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[22].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[23].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[24].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[25].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[26].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[27].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[28].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[29].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[2].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[30].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[31].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[32].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[33].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[34].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[35].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[36].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[37].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[38].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[39].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[3].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[40].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[41].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[42].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[43].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[44].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[45].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[46].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[47].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[4].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[5].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[6].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[7].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[8].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC0/XBAR0/\GEN_RAM[9].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[0].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[1].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[2].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[3].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[4].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[5].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[6].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[7].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[8].R0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/SNPC_head0/SNPC1/XBAR0/\GEN_RAM[9].R0 . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 273 ; free virtual = 15041
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'aw_cs_reg' in module 'axi_slave_if'
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:290]
+INFO: [Synth 8-5544] ROM "s_axi_rvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ar_ns" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "countburstNS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "snn_config" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element arlen_q_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:139]
+WARNING: [Synth 8-6014] Unused sequential element awlen_q_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:295]
+INFO: [Synth 8-802] inferred FSM for state register 'r_State_reg' in module 'SNPC_cntrl'
+INFO: [Synth 8-5544] ROM "r_spk_arry" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_leak_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_svalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_spk_arry" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_svalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:290]
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:290]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+        WAIT_WDATA_BURST |                              001 |                              011
+                   BURST |                              010 |                              010
+              BURST_RESP |                              011 |                              101
+       WAIT_WDATA_SINGLE |                              100 |                              100
+                  SINGLE |                              101 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'aw_cs_reg' using encoding 'sequential' in module 'axi_slave_if'
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:290]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 279 ; free virtual = 15047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 58    
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input    784 Bit         XORs := 1     
+	   2 Input     48 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 60    
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    784 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 638   
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 117   
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 274   
+	   2 Input      9 Bit        Muxes := 256   
+	   2 Input      8 Bit        Muxes := 132   
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 64    
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 54    
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 38    
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 17    
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 130   
+	   6 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_slave_if 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 6     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 7     
+Module SNPC_cntrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+Module xbar 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    784 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    784 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 273   
+	   2 Input      9 Bit        Muxes := 256   
+	   2 Input      8 Bit        Muxes := 128   
+	   2 Input      7 Bit        Muxes := 64    
+	   2 Input      6 Bit        Muxes := 32    
+	   2 Input      5 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module LIF_neuron 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 11    
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module SNPC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xbar__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     48 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 16    
+	   2 Input      5 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SNPC__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "slave_if_0/countburstNS" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element slave_if_0/awlen_q_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:295]
+WARNING: [Synth 8-6014] Unused sequential element slave_if_0/arlen_q_reg was removed.  [/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.srcs/sources_1/bd/design_1/ipshared/70eb/src/axi_slave_if.sv:139]
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[7]' (FDR) to 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[6]' (FDR) to 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[5]' (FDR) to 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[3]' (FDR) to 'inst/SNPC_head0/SNPC0/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\SNPC_head0/SNPC0 /CNTL0/\r_State_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[7]' (FDR) to 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[6]' (FDR) to 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[5]' (FDR) to 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[3]' (FDR) to 'inst/SNPC_head0/SNPC1/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\SNPC_head0/SNPC1/CNTL0/r_State_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\slave_if_0/awaddr_q_reg[5] )
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[10]' (FDCE) to 'inst/slave_if_0/snn_status_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[11]' (FDCE) to 'inst/slave_if_0/snn_status_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[12]' (FDCE) to 'inst/slave_if_0/snn_status_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[13]' (FDCE) to 'inst/slave_if_0/snn_status_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[14]' (FDCE) to 'inst/slave_if_0/snn_status_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[15]' (FDCE) to 'inst/slave_if_0/snn_status_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[16]' (FDCE) to 'inst/slave_if_0/snn_status_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[17]' (FDCE) to 'inst/slave_if_0/snn_status_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[18]' (FDCE) to 'inst/slave_if_0/snn_status_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[19]' (FDCE) to 'inst/slave_if_0/snn_status_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[20]' (FDCE) to 'inst/slave_if_0/snn_status_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[21]' (FDCE) to 'inst/slave_if_0/snn_status_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[22]' (FDCE) to 'inst/slave_if_0/snn_status_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[23]' (FDCE) to 'inst/slave_if_0/snn_status_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[24]' (FDCE) to 'inst/slave_if_0/snn_status_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[25]' (FDCE) to 'inst/slave_if_0/snn_status_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[26]' (FDCE) to 'inst/slave_if_0/snn_status_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[27]' (FDCE) to 'inst/slave_if_0/snn_status_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[28]' (FDCE) to 'inst/slave_if_0/snn_status_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[29]' (FDCE) to 'inst/slave_if_0/snn_status_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/slave_if_0/snn_status_reg[30]' (FDCE) to 'inst/slave_if_0/snn_status_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\slave_if_0/snn_status_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\slave_if_0/ar_cs_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/awaddr_q_reg[5]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[31]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[30]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[29]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[28]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[27]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[26]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[25]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[24]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[23]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[22]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[21]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[20]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[19]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[18]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[17]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[16]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[15]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[14]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[13]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[12]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[11]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[10]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[9]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[8]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[7]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[6]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[5]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[4]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[3]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[1]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/ar_cs_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[7]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[6]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[31]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (r_State_reg[4]) is unused and will be removed from module SNPC_cntrl.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC1/CNTL0/r_State_reg[4]) is unused and will be removed from module SNN_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 152 ; free virtual = 14754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 1632.305 ; gain = 553.211 ; free physical = 142 ; free virtual = 14635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1654.641 ; gain = 575.547 ; free physical = 169 ; free virtual = 14612
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[5]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[4]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[3]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[1]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/araddr_q_reg[0]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[5]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[4]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[3]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[1]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[0]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[9]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[8]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[7]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[6]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[5]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[4]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[3]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[1]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[0]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/CNTL0/r_State_reg[2]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/CNTL0/r_State_reg[1]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/CNTL0/r_State_reg[0]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[783]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[782]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[781]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[780]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[779]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[778]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[777]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[776]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[775]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[774]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[773]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[772]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[771]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[770]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[769]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[768]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[767]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[766]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[765]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[764]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[763]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[762]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[761]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[760]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[759]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[758]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[757]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[756]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[755]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[754]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[753]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[752]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[751]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[750]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[749]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[748]) is unused and will be removed from module SNN_top.
+WARNING: [Synth 8-3332] Sequential element (SNPC_head0/SNPC0/XBAR0/r_spk_arry_reg[747]) is unused and will be removed from module SNN_top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 175 ; free virtual = 14618
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[0].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[1].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[2].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[3].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[4].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[5].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[6].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[7].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[8].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[9].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[10].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[11].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[12].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[13].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[14].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[15].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[16].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[17].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[18].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[19].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[20].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[21].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[22].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[23].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[24].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[25].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[26].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[27].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[28].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[29].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[30].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[31].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[32].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[33].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[34].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[35].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[36].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[37].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[38].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[39].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[40].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[41].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[42].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[43].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[44].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[45].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[46].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC0/XBAR0/GEN_RAM[47].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[0].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[1].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[2].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[3].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[4].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[5].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[6].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[7].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[8].R0:clka to constant 0
+INFO: [Synth 8-3295] tying undriven pin SNPC_head0/SNPC1/XBAR0/GEN_RAM[9].R0:clka to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 171 ; free virtual = 14614
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 175 ; free virtual = 14618
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 171 ; free virtual = 14614
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 171 ; free virtual = 14615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 173 ; free virtual = 14616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 169 ; free virtual = 14612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     1|
+|2     |LUT2     |     6|
+|3     |LUT3     |    27|
+|4     |LUT4     |    35|
+|5     |LUT5     |    21|
+|6     |LUT6     |    31|
+|7     |MUXF7    |     5|
+|8     |RAMB18E1 |    58|
+|9     |FDCE     |    67|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+-----------------------------+------+
+|      |Instance                                               |Module                       |Cells |
++------+-------------------------------------------------------+-----------------------------+------+
+|1     |top                                                    |                             |   251|
+|2     |  inst                                                 |SNN_top                      |   251|
+|3     |    SNPC_head0                                         |SNPC_head                    |    58|
+|4     |      SNPC0                                            |SNPC                         |    48|
+|5     |        XBAR0                                          |xbar                         |    48|
+|6     |          \GEN_RAM[0].R0                               |xilinx_mem_1024x8__1         |     1|
+|7     |            U0                                         |blk_mem_gen_v8_3_6__1        |     1|
+|8     |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_280 |     1|
+|9     |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_281          |     1|
+|10    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_282 |     1|
+|11    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_283   |     1|
+|12    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_284 |     1|
+|13    |          \GEN_RAM[1].R0                               |xilinx_mem_1024x8__2         |     1|
+|14    |            U0                                         |blk_mem_gen_v8_3_6__2        |     1|
+|15    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_275 |     1|
+|16    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_276          |     1|
+|17    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_277 |     1|
+|18    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_278   |     1|
+|19    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_279 |     1|
+|20    |          \GEN_RAM[2].R0                               |xilinx_mem_1024x8__3         |     1|
+|21    |            U0                                         |blk_mem_gen_v8_3_6__3        |     1|
+|22    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_270 |     1|
+|23    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_271          |     1|
+|24    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_272 |     1|
+|25    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_273   |     1|
+|26    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_274 |     1|
+|27    |          \GEN_RAM[3].R0                               |xilinx_mem_1024x8__4         |     1|
+|28    |            U0                                         |blk_mem_gen_v8_3_6__4        |     1|
+|29    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_265 |     1|
+|30    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_266          |     1|
+|31    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_267 |     1|
+|32    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_268   |     1|
+|33    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_269 |     1|
+|34    |          \GEN_RAM[4].R0                               |xilinx_mem_1024x8__5         |     1|
+|35    |            U0                                         |blk_mem_gen_v8_3_6__5        |     1|
+|36    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_260 |     1|
+|37    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_261          |     1|
+|38    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_262 |     1|
+|39    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_263   |     1|
+|40    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_264 |     1|
+|41    |          \GEN_RAM[5].R0                               |xilinx_mem_1024x8__6         |     1|
+|42    |            U0                                         |blk_mem_gen_v8_3_6__6        |     1|
+|43    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_255 |     1|
+|44    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_256          |     1|
+|45    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_257 |     1|
+|46    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_258   |     1|
+|47    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_259 |     1|
+|48    |          \GEN_RAM[6].R0                               |xilinx_mem_1024x8__7         |     1|
+|49    |            U0                                         |blk_mem_gen_v8_3_6__7        |     1|
+|50    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_250 |     1|
+|51    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_251          |     1|
+|52    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_252 |     1|
+|53    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_253   |     1|
+|54    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_254 |     1|
+|55    |          \GEN_RAM[7].R0                               |xilinx_mem_1024x8__8         |     1|
+|56    |            U0                                         |blk_mem_gen_v8_3_6__8        |     1|
+|57    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_245 |     1|
+|58    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_246          |     1|
+|59    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_247 |     1|
+|60    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_248   |     1|
+|61    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_249 |     1|
+|62    |          \GEN_RAM[8].R0                               |xilinx_mem_1024x8__9         |     1|
+|63    |            U0                                         |blk_mem_gen_v8_3_6__9        |     1|
+|64    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_240 |     1|
+|65    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_241          |     1|
+|66    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_242 |     1|
+|67    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_243   |     1|
+|68    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_244 |     1|
+|69    |          \GEN_RAM[9].R0                               |xilinx_mem_1024x8__10        |     1|
+|70    |            U0                                         |blk_mem_gen_v8_3_6__10       |     1|
+|71    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_235 |     1|
+|72    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_236          |     1|
+|73    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_237 |     1|
+|74    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_238   |     1|
+|75    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_239 |     1|
+|76    |          \GEN_RAM[10].R0                              |xilinx_mem_1024x8__11        |     1|
+|77    |            U0                                         |blk_mem_gen_v8_3_6__11       |     1|
+|78    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_230 |     1|
+|79    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_231          |     1|
+|80    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_232 |     1|
+|81    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_233   |     1|
+|82    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_234 |     1|
+|83    |          \GEN_RAM[11].R0                              |xilinx_mem_1024x8__12        |     1|
+|84    |            U0                                         |blk_mem_gen_v8_3_6__12       |     1|
+|85    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_225 |     1|
+|86    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_226          |     1|
+|87    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_227 |     1|
+|88    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_228   |     1|
+|89    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_229 |     1|
+|90    |          \GEN_RAM[12].R0                              |xilinx_mem_1024x8__13        |     1|
+|91    |            U0                                         |blk_mem_gen_v8_3_6__13       |     1|
+|92    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_220 |     1|
+|93    |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_221          |     1|
+|94    |                  \valid.cstr                          |blk_mem_gen_generic_cstr_222 |     1|
+|95    |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_223   |     1|
+|96    |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_224 |     1|
+|97    |          \GEN_RAM[13].R0                              |xilinx_mem_1024x8__14        |     1|
+|98    |            U0                                         |blk_mem_gen_v8_3_6__14       |     1|
+|99    |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_215 |     1|
+|100   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_216          |     1|
+|101   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_217 |     1|
+|102   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_218   |     1|
+|103   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_219 |     1|
+|104   |          \GEN_RAM[14].R0                              |xilinx_mem_1024x8__15        |     1|
+|105   |            U0                                         |blk_mem_gen_v8_3_6__15       |     1|
+|106   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_210 |     1|
+|107   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_211          |     1|
+|108   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_212 |     1|
+|109   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_213   |     1|
+|110   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_214 |     1|
+|111   |          \GEN_RAM[15].R0                              |xilinx_mem_1024x8__16        |     1|
+|112   |            U0                                         |blk_mem_gen_v8_3_6__16       |     1|
+|113   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_205 |     1|
+|114   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_206          |     1|
+|115   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_207 |     1|
+|116   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_208   |     1|
+|117   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_209 |     1|
+|118   |          \GEN_RAM[16].R0                              |xilinx_mem_1024x8__17        |     1|
+|119   |            U0                                         |blk_mem_gen_v8_3_6__17       |     1|
+|120   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_200 |     1|
+|121   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_201          |     1|
+|122   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_202 |     1|
+|123   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_203   |     1|
+|124   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_204 |     1|
+|125   |          \GEN_RAM[17].R0                              |xilinx_mem_1024x8__18        |     1|
+|126   |            U0                                         |blk_mem_gen_v8_3_6__18       |     1|
+|127   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_195 |     1|
+|128   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_196          |     1|
+|129   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_197 |     1|
+|130   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_198   |     1|
+|131   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_199 |     1|
+|132   |          \GEN_RAM[18].R0                              |xilinx_mem_1024x8__19        |     1|
+|133   |            U0                                         |blk_mem_gen_v8_3_6__19       |     1|
+|134   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_190 |     1|
+|135   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_191          |     1|
+|136   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_192 |     1|
+|137   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_193   |     1|
+|138   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_194 |     1|
+|139   |          \GEN_RAM[19].R0                              |xilinx_mem_1024x8__20        |     1|
+|140   |            U0                                         |blk_mem_gen_v8_3_6__20       |     1|
+|141   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_185 |     1|
+|142   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_186          |     1|
+|143   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_187 |     1|
+|144   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_188   |     1|
+|145   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_189 |     1|
+|146   |          \GEN_RAM[20].R0                              |xilinx_mem_1024x8__21        |     1|
+|147   |            U0                                         |blk_mem_gen_v8_3_6__21       |     1|
+|148   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_180 |     1|
+|149   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_181          |     1|
+|150   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_182 |     1|
+|151   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_183   |     1|
+|152   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_184 |     1|
+|153   |          \GEN_RAM[21].R0                              |xilinx_mem_1024x8__22        |     1|
+|154   |            U0                                         |blk_mem_gen_v8_3_6__22       |     1|
+|155   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_175 |     1|
+|156   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_176          |     1|
+|157   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_177 |     1|
+|158   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_178   |     1|
+|159   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_179 |     1|
+|160   |          \GEN_RAM[22].R0                              |xilinx_mem_1024x8__23        |     1|
+|161   |            U0                                         |blk_mem_gen_v8_3_6__23       |     1|
+|162   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_170 |     1|
+|163   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_171          |     1|
+|164   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_172 |     1|
+|165   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_173   |     1|
+|166   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_174 |     1|
+|167   |          \GEN_RAM[23].R0                              |xilinx_mem_1024x8__24        |     1|
+|168   |            U0                                         |blk_mem_gen_v8_3_6__24       |     1|
+|169   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_165 |     1|
+|170   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_166          |     1|
+|171   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_167 |     1|
+|172   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_168   |     1|
+|173   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_169 |     1|
+|174   |          \GEN_RAM[24].R0                              |xilinx_mem_1024x8__25        |     1|
+|175   |            U0                                         |blk_mem_gen_v8_3_6__25       |     1|
+|176   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_160 |     1|
+|177   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_161          |     1|
+|178   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_162 |     1|
+|179   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_163   |     1|
+|180   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_164 |     1|
+|181   |          \GEN_RAM[25].R0                              |xilinx_mem_1024x8__26        |     1|
+|182   |            U0                                         |blk_mem_gen_v8_3_6__26       |     1|
+|183   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_155 |     1|
+|184   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_156          |     1|
+|185   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_157 |     1|
+|186   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_158   |     1|
+|187   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_159 |     1|
+|188   |          \GEN_RAM[26].R0                              |xilinx_mem_1024x8__27        |     1|
+|189   |            U0                                         |blk_mem_gen_v8_3_6__27       |     1|
+|190   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_150 |     1|
+|191   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_151          |     1|
+|192   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_152 |     1|
+|193   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_153   |     1|
+|194   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_154 |     1|
+|195   |          \GEN_RAM[27].R0                              |xilinx_mem_1024x8__28        |     1|
+|196   |            U0                                         |blk_mem_gen_v8_3_6__28       |     1|
+|197   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_145 |     1|
+|198   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_146          |     1|
+|199   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_147 |     1|
+|200   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_148   |     1|
+|201   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_149 |     1|
+|202   |          \GEN_RAM[28].R0                              |xilinx_mem_1024x8__29        |     1|
+|203   |            U0                                         |blk_mem_gen_v8_3_6__29       |     1|
+|204   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_140 |     1|
+|205   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_141          |     1|
+|206   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_142 |     1|
+|207   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_143   |     1|
+|208   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_144 |     1|
+|209   |          \GEN_RAM[29].R0                              |xilinx_mem_1024x8__30        |     1|
+|210   |            U0                                         |blk_mem_gen_v8_3_6__30       |     1|
+|211   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_135 |     1|
+|212   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_136          |     1|
+|213   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_137 |     1|
+|214   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_138   |     1|
+|215   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_139 |     1|
+|216   |          \GEN_RAM[30].R0                              |xilinx_mem_1024x8__31        |     1|
+|217   |            U0                                         |blk_mem_gen_v8_3_6__31       |     1|
+|218   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_130 |     1|
+|219   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_131          |     1|
+|220   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_132 |     1|
+|221   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_133   |     1|
+|222   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_134 |     1|
+|223   |          \GEN_RAM[31].R0                              |xilinx_mem_1024x8__32        |     1|
+|224   |            U0                                         |blk_mem_gen_v8_3_6__32       |     1|
+|225   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_125 |     1|
+|226   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_126          |     1|
+|227   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_127 |     1|
+|228   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_128   |     1|
+|229   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_129 |     1|
+|230   |          \GEN_RAM[32].R0                              |xilinx_mem_1024x8__33        |     1|
+|231   |            U0                                         |blk_mem_gen_v8_3_6__33       |     1|
+|232   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_120 |     1|
+|233   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_121          |     1|
+|234   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_122 |     1|
+|235   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_123   |     1|
+|236   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_124 |     1|
+|237   |          \GEN_RAM[33].R0                              |xilinx_mem_1024x8__34        |     1|
+|238   |            U0                                         |blk_mem_gen_v8_3_6__34       |     1|
+|239   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_115 |     1|
+|240   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_116          |     1|
+|241   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_117 |     1|
+|242   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_118   |     1|
+|243   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_119 |     1|
+|244   |          \GEN_RAM[34].R0                              |xilinx_mem_1024x8__35        |     1|
+|245   |            U0                                         |blk_mem_gen_v8_3_6__35       |     1|
+|246   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_110 |     1|
+|247   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_111          |     1|
+|248   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_112 |     1|
+|249   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_113   |     1|
+|250   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_114 |     1|
+|251   |          \GEN_RAM[35].R0                              |xilinx_mem_1024x8__36        |     1|
+|252   |            U0                                         |blk_mem_gen_v8_3_6__36       |     1|
+|253   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_105 |     1|
+|254   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_106          |     1|
+|255   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_107 |     1|
+|256   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_108   |     1|
+|257   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_109 |     1|
+|258   |          \GEN_RAM[36].R0                              |xilinx_mem_1024x8__37        |     1|
+|259   |            U0                                         |blk_mem_gen_v8_3_6__37       |     1|
+|260   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_100 |     1|
+|261   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_101          |     1|
+|262   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_102 |     1|
+|263   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_103   |     1|
+|264   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_104 |     1|
+|265   |          \GEN_RAM[37].R0                              |xilinx_mem_1024x8__38        |     1|
+|266   |            U0                                         |blk_mem_gen_v8_3_6__38       |     1|
+|267   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_95  |     1|
+|268   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_96           |     1|
+|269   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_97  |     1|
+|270   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_98    |     1|
+|271   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_99  |     1|
+|272   |          \GEN_RAM[38].R0                              |xilinx_mem_1024x8__39        |     1|
+|273   |            U0                                         |blk_mem_gen_v8_3_6__39       |     1|
+|274   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_90  |     1|
+|275   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_91           |     1|
+|276   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_92  |     1|
+|277   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_93    |     1|
+|278   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_94  |     1|
+|279   |          \GEN_RAM[39].R0                              |xilinx_mem_1024x8__40        |     1|
+|280   |            U0                                         |blk_mem_gen_v8_3_6__40       |     1|
+|281   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_85  |     1|
+|282   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_86           |     1|
+|283   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_87  |     1|
+|284   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_88    |     1|
+|285   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_89  |     1|
+|286   |          \GEN_RAM[40].R0                              |xilinx_mem_1024x8__41        |     1|
+|287   |            U0                                         |blk_mem_gen_v8_3_6__41       |     1|
+|288   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_80  |     1|
+|289   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_81           |     1|
+|290   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_82  |     1|
+|291   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_83    |     1|
+|292   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_84  |     1|
+|293   |          \GEN_RAM[41].R0                              |xilinx_mem_1024x8__42        |     1|
+|294   |            U0                                         |blk_mem_gen_v8_3_6__42       |     1|
+|295   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_75  |     1|
+|296   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_76           |     1|
+|297   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_77  |     1|
+|298   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_78    |     1|
+|299   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_79  |     1|
+|300   |          \GEN_RAM[42].R0                              |xilinx_mem_1024x8__43        |     1|
+|301   |            U0                                         |blk_mem_gen_v8_3_6__43       |     1|
+|302   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_70  |     1|
+|303   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_71           |     1|
+|304   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_72  |     1|
+|305   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_73    |     1|
+|306   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_74  |     1|
+|307   |          \GEN_RAM[43].R0                              |xilinx_mem_1024x8__44        |     1|
+|308   |            U0                                         |blk_mem_gen_v8_3_6__44       |     1|
+|309   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_65  |     1|
+|310   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_66           |     1|
+|311   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_67  |     1|
+|312   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_68    |     1|
+|313   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_69  |     1|
+|314   |          \GEN_RAM[44].R0                              |xilinx_mem_1024x8__45        |     1|
+|315   |            U0                                         |blk_mem_gen_v8_3_6__45       |     1|
+|316   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_60  |     1|
+|317   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_61           |     1|
+|318   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_62  |     1|
+|319   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_63    |     1|
+|320   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_64  |     1|
+|321   |          \GEN_RAM[45].R0                              |xilinx_mem_1024x8__46        |     1|
+|322   |            U0                                         |blk_mem_gen_v8_3_6__46       |     1|
+|323   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_55  |     1|
+|324   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_56           |     1|
+|325   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_57  |     1|
+|326   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_58    |     1|
+|327   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_59  |     1|
+|328   |          \GEN_RAM[46].R0                              |xilinx_mem_1024x8__47        |     1|
+|329   |            U0                                         |blk_mem_gen_v8_3_6__47       |     1|
+|330   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_50  |     1|
+|331   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_51           |     1|
+|332   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_52  |     1|
+|333   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_53    |     1|
+|334   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_54  |     1|
+|335   |          \GEN_RAM[47].R0                              |xilinx_mem_1024x8__48        |     1|
+|336   |            U0                                         |blk_mem_gen_v8_3_6__48       |     1|
+|337   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_45  |     1|
+|338   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_46           |     1|
+|339   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_47  |     1|
+|340   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_48    |     1|
+|341   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_49  |     1|
+|342   |      SNPC1                                            |SNPC__parameterized0         |    10|
+|343   |        XBAR0                                          |xbar__parameterized0         |    10|
+|344   |          \GEN_RAM[0].R0                               |xilinx_mem_1024x8__49        |     1|
+|345   |            U0                                         |blk_mem_gen_v8_3_6__49       |     1|
+|346   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_40  |     1|
+|347   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_41           |     1|
+|348   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_42  |     1|
+|349   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_43    |     1|
+|350   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_44  |     1|
+|351   |          \GEN_RAM[1].R0                               |xilinx_mem_1024x8__50        |     1|
+|352   |            U0                                         |blk_mem_gen_v8_3_6__50       |     1|
+|353   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_35  |     1|
+|354   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_36           |     1|
+|355   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_37  |     1|
+|356   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_38    |     1|
+|357   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_39  |     1|
+|358   |          \GEN_RAM[2].R0                               |xilinx_mem_1024x8__51        |     1|
+|359   |            U0                                         |blk_mem_gen_v8_3_6__51       |     1|
+|360   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_30  |     1|
+|361   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_31           |     1|
+|362   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_32  |     1|
+|363   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_33    |     1|
+|364   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_34  |     1|
+|365   |          \GEN_RAM[3].R0                               |xilinx_mem_1024x8__52        |     1|
+|366   |            U0                                         |blk_mem_gen_v8_3_6__52       |     1|
+|367   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_25  |     1|
+|368   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_26           |     1|
+|369   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_27  |     1|
+|370   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_28    |     1|
+|371   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_29  |     1|
+|372   |          \GEN_RAM[4].R0                               |xilinx_mem_1024x8__53        |     1|
+|373   |            U0                                         |blk_mem_gen_v8_3_6__53       |     1|
+|374   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_20  |     1|
+|375   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_21           |     1|
+|376   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_22  |     1|
+|377   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_23    |     1|
+|378   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_24  |     1|
+|379   |          \GEN_RAM[5].R0                               |xilinx_mem_1024x8__54        |     1|
+|380   |            U0                                         |blk_mem_gen_v8_3_6__54       |     1|
+|381   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_15  |     1|
+|382   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_16           |     1|
+|383   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_17  |     1|
+|384   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_18    |     1|
+|385   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_19  |     1|
+|386   |          \GEN_RAM[6].R0                               |xilinx_mem_1024x8__55        |     1|
+|387   |            U0                                         |blk_mem_gen_v8_3_6__55       |     1|
+|388   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_10  |     1|
+|389   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_11           |     1|
+|390   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_12  |     1|
+|391   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_13    |     1|
+|392   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_14  |     1|
+|393   |          \GEN_RAM[7].R0                               |xilinx_mem_1024x8__56        |     1|
+|394   |            U0                                         |blk_mem_gen_v8_3_6__56       |     1|
+|395   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_5   |     1|
+|396   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_6            |     1|
+|397   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_7   |     1|
+|398   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_8     |     1|
+|399   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_9   |     1|
+|400   |          \GEN_RAM[8].R0                               |xilinx_mem_1024x8__57        |     1|
+|401   |            U0                                         |blk_mem_gen_v8_3_6__57       |     1|
+|402   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth_0   |     1|
+|403   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top_1            |     1|
+|404   |                  \valid.cstr                          |blk_mem_gen_generic_cstr_2   |     1|
+|405   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width_3     |     1|
+|406   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper_4   |     1|
+|407   |          \GEN_RAM[9].R0                               |xilinx_mem_1024x8            |     1|
+|408   |            U0                                         |blk_mem_gen_v8_3_6           |     1|
+|409   |              inst_blk_mem_gen                         |blk_mem_gen_v8_3_6_synth     |     1|
+|410   |                \gnbram.gnativebmg.native_blk_mem_gen  |blk_mem_gen_top              |     1|
+|411   |                  \valid.cstr                          |blk_mem_gen_generic_cstr     |     1|
+|412   |                    \ramloop[0].ram.r                  |blk_mem_gen_prim_width       |     1|
+|413   |                      \prim_noinit.ram                 |blk_mem_gen_prim_wrapper     |     1|
+|414   |    slave_if_0                                         |axi_slave_if                 |   193|
++------+-------------------------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.648 ; gain = 583.555 ; free physical = 169 ; free virtual = 14612
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2101 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 1662.648 ; gain = 304.516 ; free physical = 224 ; free virtual = 14667
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1662.656 ; gain = 583.555 ; free physical = 223 ; free virtual = 14666
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+158 Infos, 220 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1694.664 ; gain = 630.152 ; free physical = 233 ; free virtual = 14677
+INFO: [Common 17-1381] The checkpoint '/home/doanh/Work/SNN_Undervoltage_Stack_SRAM/FPGA/example/example_SNN/example_SNN.runs/design_1_SNN_top_1_0_synth_1/design_1_SNN_top_1_0.dcp' has been generated.

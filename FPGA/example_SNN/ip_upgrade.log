@@ -1,0 +1,51 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Wed Jul 26 00:35:28 2023
+| Host         : Doanh-Ngo running 64-bit Manjaro Linux
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_SNN_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_SNN_top_0_0 (SNN:processor:SNN_top:1.0) from (Rev. 7) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_SNN_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'address_1'
+
+-Upgrade has added port 'address_2'
+
+-Upgrade has added port 'cs_1'
+
+-Upgrade has added port 'cs_2'
+
+-Upgrade has added port 'data_1'
+
+-Upgrade has added port 'data_2'
+
+-Upgrade has added port 'i_spk_arry'
+
+-Upgrade has added port 'i_svalid'
+
+-Upgrade has added port 'o_start'
+
+-Upgrade has added port 'oe_1'
+
+-Upgrade has added port 'oe_2'
+
+-Upgrade has added port 'we_1'
+
+-Upgrade has added port 'we_2'
+
+

@@ -1,0 +1,13 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x923da9) [0x7fed58b23da9]
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xb6) [0x7fed58b2a3f6]
+/home/doanh/Work/Xilinx/Vivado/2017.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x9209d3) [0x7fed58b209d3]
+/usr/lib/libc.so.6(+0x39ab0) [0x7fed98a4fab0]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_tcltasks.so(design::detail::get_files_as_obj[abi:cxx11](HSTVector<HDDASrcFile*, std::allocator<HDDASrcFile*> > const&, HADAFileSet const*)+0x136) [0x7fed89e08ab6]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_tcltasks.so(HTCDesignCommands::exportIpUserFiles_(HADAFileSet*, HSTVector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)+0x294) [0x7fed89e0c774]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_tcltasks.so(HTCDesignCommands::importSources(HADAFileSet*, HSTVector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, bool, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)+0x10b) [0x7fed89e0cdfb]
+/home/doanh/Work/Xilinx/Vivado/2017.1/lib/lnx64.o/librdi_tcltasks.so(Java_ui_frmwork_designcmds_HTCDesignCommands_1importSources+0x228) [0x7fed89f769b8]
+[0x7fed486173f4]

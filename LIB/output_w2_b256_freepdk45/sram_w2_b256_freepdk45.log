@@ -1,0 +1,74 @@
+|==============================================================================|
+|=========                       OpenRAM v1.1.6                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========          Temp dir: /tmp/openram_doanh_21017_temp/          =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 11/14/2022 15:18:00
+Technology: freepdk45
+Total size: 512 bits
+Word size: 2
+Words: 256
+Banks: 1
+Write size: None
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Words per row: 8
+Output files are: 
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.lvs
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.sp
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.v
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.lib
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.py
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.html
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.log
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.lef
+/home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.gds
+** Submodules: 1.6 seconds
+** Placement: 0.0 seconds
+*** Init supply router: 18.8 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.1 seconds
+**** Finding blockages: 0.5 seconds
+**** Converting blockages: 0.0 seconds
+**** Converting pins: 1.0 seconds
+**** Separating adjacent pins: 0.3 seconds
+**** Enclosing pins: 0.5 seconds
+*** Finding pins and blockages: 2.4 seconds
+*** Routing supply rails: 2.7 seconds
+*** Simple overlap routing: 0.0 seconds
+*** Maze routing supplies: 6.0 seconds
+** Routing: 30.0 seconds
+WARNING: file none.py: line 23: DRC unable to run.
+
+WARNING: file none.py: line 32: LVS unable to run.
+
+** Verification: 0.6 seconds
+** SRAM creation: 32.4 seconds
+LEF: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.lef
+** LEF: 5.0 seconds
+GDS: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.gds
+** GDS: 0.4 seconds
+SP: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.sp
+** Spice writing: 0.1 seconds
+LVS: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.lvs
+** LVS writing: 0.1 seconds
+LIB: Characterizing... 
+** Characterization: 1.3 seconds
+Config: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.py
+** Config: 0.0 seconds
+Datasheet: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.html
+** Datasheet: 0.0 seconds
+Verilog: Writing to /home/doanh/Work/OpenRAM_1.6/output_w2_b256_freepdk45/sram_w2_b256_freepdk45.v
+** Verilog: 0.0 seconds
+** End: 39.5 seconds

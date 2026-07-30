@@ -1,0 +1,1010 @@
+
+*** Running vivado
+    with args -log SNN_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SNN_top.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source SNN_top.tcl -notrace
+Command: synth_design -top SNN_top -part xc7z020clg484-1 -directive AreaOptimized_high -control_set_opt_threshold 1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 98766 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1137.484 ; gain = 62.000 ; free physical = 12340 ; free virtual = 32000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SNN_top' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNN_top.v:4]
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter AXI4_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_USER_WIDTH bound to: 4 - type: integer 
+	Parameter AXI4_ID_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_slave_if' [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:11]
+	Parameter AXI4_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter AXI4_USER_WIDTH bound to: 4 - type: integer 
+	Parameter AXI4_ID_WIDTH bound to: 16 - type: integer 
+	Parameter OFFSET_BIT bound to: 2 - type: integer 
+	Parameter ADDR_CMP bound to: 0 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:335]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:557]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:569]
+WARNING: [Synth 8-6014] Unused sequential element read_req_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:164]
+WARNING: [Synth 8-6014] Unused sequential element countburst_AW_CS_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:299]
+WARNING: [Synth 8-6014] Unused sequential element countburst_AW_NS_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:328]
+WARNING: [Synth 8-5788] Register snn_status_reg in module axi_slave_if is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:548]
+INFO: [Synth 8-256] done synthesizing module 'axi_slave_if' (1#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:11]
+INFO: [Synth 8-638] synthesizing module 'SNN_wrapper' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNN_wrapper.v:1]
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SNPC_top' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC_top.v:4]
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SNPC' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'LIF_neuron' [/home/doanh/Work/SNN_Stack_SRAM/RTL/LIF_neuron.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+WARNING: [Synth 8-3848] Net TBD in module/entity LIF_neuron does not have driver. [/home/doanh/Work/SNN_Stack_SRAM/RTL/LIF_neuron.v:24]
+INFO: [Synth 8-256] done synthesizing module 'LIF_neuron' (2#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/LIF_neuron.v:9]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+INFO: [Synth 8-638] synthesizing module 'SNPC_cntrl' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC_cntrl.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SNPC_cntrl' (3#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC_cntrl.v:9]
+INFO: [Synth 8-638] synthesizing module 'xbar' [/home/doanh/Work/SNN_Stack_SRAM/RTL/xbar.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 784 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'xilinx_mem_1024x8' [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/realtime/xilinx_mem_1024x8_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xilinx_mem_1024x8' (4#1) [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/realtime/xilinx_mem_1024x8_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xbar' (5#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/xbar.v:9]
+WARNING: [Synth 8-3848] Net w_LB_done in module/entity SNPC does not have driver. [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:55]
+INFO: [Synth 8-256] done synthesizing module 'SNPC' (6#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:9]
+INFO: [Synth 8-638] synthesizing module 'SNPC__parameterized0' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter LIF_NEURON_OVRFL_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+CRITICAL WARNING: [Synth 8-350] instance 'LIF0' of module 'LIF_neuron' requires 8 connections, but only 7 given [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:135]
+INFO: [Synth 8-638] synthesizing module 'xbar__parameterized0' [/home/doanh/Work/SNN_Stack_SRAM/RTL/xbar.v:9]
+	Parameter WEIGHT_WIDTH bound to: 8 - type: integer 
+	Parameter SPK_ARRAY_WIDTH bound to: 48 - type: integer 
+	Parameter NEURAL_ARRAY_WIDTH bound to: 10 - type: integer 
+	Parameter STATE_WIDTH bound to: 3 - type: integer 
+	Parameter WEIGHT_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter OUTPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xbar__parameterized0' (6#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/xbar.v:9]
+WARNING: [Synth 8-3848] Net w_LB_done in module/entity SNPC__parameterized0 does not have driver. [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:55]
+INFO: [Synth 8-256] done synthesizing module 'SNPC__parameterized0' (6#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC.v:9]
+INFO: [Synth 8-256] done synthesizing module 'SNPC_top' (7#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNPC_top.v:4]
+INFO: [Synth 8-256] done synthesizing module 'SNN_wrapper' (8#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNN_wrapper.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'o_spike' does not match port width (10) of module 'SNN_wrapper' [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNN_top.v:191]
+INFO: [Synth 8-256] done synthesizing module 'SNN_top' (9#1) [/home/doanh/Work/SNN_Stack_SRAM/RTL/SNN_top.v:4]
+CRITICAL WARNING: [Synth 8-3331] design LIF_neuron has unconnected port TBD
+CRITICAL WARNING: [Synth 8-3331] design xbar__parameterized0 has unconnected port cs_1
+CRITICAL WARNING: [Synth 8-3331] design xbar__parameterized0 has unconnected port we_1
+CRITICAL WARNING: [Synth 8-3331] design xbar__parameterized0 has unconnected port oe_1
+CRITICAL WARNING: [Synth 8-3331] design SNPC_cntrl has unconnected port i_LB_done
+CRITICAL WARNING: [Synth 8-3331] design xbar has unconnected port cs_1
+CRITICAL WARNING: [Synth 8-3331] design xbar has unconnected port we_1
+CRITICAL WARNING: [Synth 8-3331] design xbar has unconnected port oe_1
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[31]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[30]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[29]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[28]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[27]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[26]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[25]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[24]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[23]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[22]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[21]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[20]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[19]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[18]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[17]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[16]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[15]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[14]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[13]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[12]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[11]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[10]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[9]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[8]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[7]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awaddr[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wstrb[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wstrb[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wstrb[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wstrb[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wlast
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wuser[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wuser[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wuser[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_wuser[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[31]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[30]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[29]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[28]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[27]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[26]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[25]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[24]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[23]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[22]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[21]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[20]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[19]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[18]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[17]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[16]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[15]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[14]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[13]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[12]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[11]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[10]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[9]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[8]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[7]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_araddr[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awsize[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awsize[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awsize[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awburst[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awburst[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awlock
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awcache[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awcache[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awcache[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awcache[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awprot[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awprot[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awprot[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awregion[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awregion[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awregion[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awregion[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awqos[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awqos[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awqos[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_awqos[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arsize[2]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arsize[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arsize[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arburst[1]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arburst[0]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arlock
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arcache[3]
+CRITICAL WARNING: [Synth 8-3331] design axi_slave_if has unconnected port s_axi_arcache[2]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1212.984 ; gain = 137.500 ; free physical = 12306 ; free virtual = 31968
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1212.984 ; gain = 137.500 ; free physical = 12318 ; free virtual = 31980
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Project 1-841] The design checkpoint file '/home/doanh/Work/SNN_Stack_SRAM/FPGA/ips/xilinx_mem_1024x8/ip/xilinx_mem_1024x8.dcp' was generated for an IP by an out of context synthesis run and should not directly be used as a source in a Vivado flow. It is strongly recommended that that the original IP source file (.xci) be used.
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[0].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[1].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[1].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[2].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[2].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[3].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[3].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[4].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[4].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[5].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[5].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[6].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[6].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[7].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[7].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[8].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[8].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[9].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[9].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[10].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[10].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[11].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[11].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[12].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[12].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[13].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[13].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[14].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[14].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[15].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[15].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[16].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[16].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[17].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[17].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[18].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[18].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[19].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[19].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[20].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[20].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[21].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[21].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[22].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[22].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[23].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[23].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[24].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[24].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[25].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[25].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[26].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[26].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[27].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[27].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[28].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[28].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[29].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[29].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[30].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[30].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[31].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[31].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[32].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[32].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[33].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[33].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[34].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[34].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[35].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[35].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[36].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[36].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[37].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[37].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[38].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[38].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[39].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[39].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[40].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[40].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[41].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[41].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[42].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[42].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[43].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[43].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[44].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[44].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[45].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[45].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[46].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[46].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[47].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC0/XBAR0/GEN_RAM[47].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[0].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[0].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[1].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[1].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[2].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[2].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[3].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[3].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[4].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[4].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[5].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[5].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[6].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[6].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[7].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[7].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[8].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[8].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[9].R0'
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/.Xil/Vivado-98746-Doanh-Ngo/dcp7/xilinx_mem_1024x8_in_context.xdc] for cell 'SNN0/SNPC_top0/SNPC1/XBAR0/GEN_RAM[9].R0'
+Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/constraints.xdc]
+Finished Parsing XDC File [/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/constraints.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1596.000 ; gain = 0.000 ; free physical = 12053 ; free virtual = 31715
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.000 ; gain = 520.516 ; free physical = 12162 ; free virtual = 31823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.000 ; gain = 520.516 ; free physical = 12162 ; free virtual = 31823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1596.000 ; gain = 520.516 ; free physical = 12163 ; free virtual = 31824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'aw_cs_reg' in module 'axi_slave_if'
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:297]
+INFO: [Synth 8-5544] ROM "s_axi_rvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ar_ns" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "countburstNS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "snn_config" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ar_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aw_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "aw_ns" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element arlen_q_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:140]
+WARNING: [Synth 8-6014] Unused sequential element awlen_q_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:302]
+INFO: [Synth 8-802] inferred FSM for state register 'r_State_reg' in module 'SNPC_cntrl'
+INFO: [Synth 8-5544] ROM "r_spk_arry" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_leak_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_svalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_spk_arry" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_svalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:297]
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:297]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+        WAIT_WDATA_BURST |                              001 |                              011
+                   BURST |                              010 |                              010
+              BURST_RESP |                              011 |                              101
+       WAIT_WDATA_SINGLE |                              100 |                              100
+                  SINGLE |                              101 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'aw_cs_reg' using encoding 'sequential' in module 'axi_slave_if'
+WARNING: [Synth 8-6014] Unused sequential element aw_cs_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:297]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1596.000 ; gain = 520.516 ; free physical = 12139 ; free virtual = 31800
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 58    
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input    784 Bit         XORs := 1     
+	   2 Input     48 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 60    
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    784 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 638   
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 117   
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 274   
+	   2 Input      9 Bit        Muxes := 256   
+	   2 Input      8 Bit        Muxes := 132   
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 64    
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 54    
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 38    
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 17    
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 130   
+	   6 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_slave_if 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 6     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 7     
+Module SNPC_cntrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+Module xbar 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    784 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    784 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 273   
+	   2 Input      9 Bit        Muxes := 256   
+	   2 Input      8 Bit        Muxes := 128   
+	   2 Input      7 Bit        Muxes := 64    
+	   2 Input      6 Bit        Muxes := 32    
+	   2 Input      5 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module LIF_neuron 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 11    
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module SNPC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xbar__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     48 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 16    
+	   2 Input      5 Bit        Muxes := 16    
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SNPC__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "slave_if_0/countburstNS" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element slave_if_0/awlen_q_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:302]
+WARNING: [Synth 8-6014] Unused sequential element slave_if_0/arlen_q_reg was removed.  [/home/doanh/Work/SNN_Stack_SRAM/RTL/axi_slave_if.sv:140]
+WARNING: [Synth 8-3917] design SNN_top has port s_axi_bresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design SNN_top has port s_axi_bresp[0] driven by constant 0
+WARNING: [Synth 8-3917] design SNN_top has port s_axi_rresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design SNN_top has port s_axi_rresp[0] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[7]' (FDR) to 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[6]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[6]' (FDR) to 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[5]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[5]' (FDR) to 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[3]' (FDR) to 'SNN0/SNPC_top0/SNPC0/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SNN0/SNPC_top0/SNPC0 /CNTL0/\r_State_reg[4] )
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[7]' (FDR) to 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[6]' (FDR) to 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[5]' (FDR) to 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[3]' (FDR) to 'SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\slave_if_0/awaddr_q_reg[5] )
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[10]' (FDE) to 'slave_if_0/snn_status_reg[11]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[11]' (FDE) to 'slave_if_0/snn_status_reg[12]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[12]' (FDE) to 'slave_if_0/snn_status_reg[13]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[13]' (FDE) to 'slave_if_0/snn_status_reg[14]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[14]' (FDE) to 'slave_if_0/snn_status_reg[15]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[15]' (FDE) to 'slave_if_0/snn_status_reg[16]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[16]' (FDE) to 'slave_if_0/snn_status_reg[17]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[17]' (FDE) to 'slave_if_0/snn_status_reg[18]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[18]' (FDE) to 'slave_if_0/snn_status_reg[19]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[19]' (FDE) to 'slave_if_0/snn_status_reg[20]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[20]' (FDE) to 'slave_if_0/snn_status_reg[21]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[21]' (FDE) to 'slave_if_0/snn_status_reg[22]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[22]' (FDE) to 'slave_if_0/snn_status_reg[23]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[23]' (FDE) to 'slave_if_0/snn_status_reg[24]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[24]' (FDE) to 'slave_if_0/snn_status_reg[25]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[25]' (FDE) to 'slave_if_0/snn_status_reg[26]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[26]' (FDE) to 'slave_if_0/snn_status_reg[27]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[27]' (FDE) to 'slave_if_0/snn_status_reg[28]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[28]' (FDE) to 'slave_if_0/snn_status_reg[29]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[29]' (FDE) to 'slave_if_0/snn_status_reg[30]'
+INFO: [Synth 8-3886] merging instance 'slave_if_0/snn_status_reg[30]' (FDE) to 'slave_if_0/snn_status_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\slave_if_0/snn_status_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\slave_if_0/ar_cs_reg[2] )
+INFO: [Synth 8-3332] Sequential element (slave_if_0/awaddr_q_reg[5]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[31]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[30]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[29]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[28]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[27]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[26]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[25]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[24]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[23]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[22]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[21]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[20]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[19]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[18]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[17]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[16]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[15]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[14]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[13]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[12]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[11]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[10]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[9]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[8]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[7]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[6]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[5]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[4]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[3]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[2]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_config_reg[1]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/ar_cs_reg[2]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[7]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/countburstCS_reg[6]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (slave_if_0/snn_status_reg[31]) is unused and will be removed from module SNN_top.
+INFO: [Synth 8-3332] Sequential element (r_State_reg[4]) is unused and will be removed from module SNPC_cntrl.
+INFO: [Synth 8-3332] Sequential element (SNN0/SNPC_top0/SNPC1/CNTL0/r_State_reg[4]) is unused and will be removed from module SNN_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:28 ; elapsed = 00:06:31 . Memory (MB): peak = 1596.000 ; gain = 520.516 ; free physical = 12154 ; free virtual = 31787
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:31 ; elapsed = 00:06:34 . Memory (MB): peak = 1622.984 ; gain = 547.500 ; free physical = 12025 ; free virtual = 31658
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:10:14 ; elapsed = 00:10:18 . Memory (MB): peak = 1784.375 ; gain = 708.891 ; free physical = 11711 ; free virtual = 31343
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:10:17 ; elapsed = 00:10:20 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11694 ; free virtual = 31326
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:10:17 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31324
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:10:17 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:17 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:10:17 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:10:18 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:10:18 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |xilinx_mem_1024x8 |        58|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |xilinx_mem_1024x8     |     1|
+|2     |xilinx_mem_1024x8__1  |     1|
+|3     |xilinx_mem_1024x8__10 |     1|
+|4     |xilinx_mem_1024x8__11 |     1|
+|5     |xilinx_mem_1024x8__12 |     1|
+|6     |xilinx_mem_1024x8__13 |     1|
+|7     |xilinx_mem_1024x8__14 |     1|
+|8     |xilinx_mem_1024x8__15 |     1|
+|9     |xilinx_mem_1024x8__16 |     1|
+|10    |xilinx_mem_1024x8__17 |     1|
+|11    |xilinx_mem_1024x8__18 |     1|
+|12    |xilinx_mem_1024x8__19 |     1|
+|13    |xilinx_mem_1024x8__2  |     1|
+|14    |xilinx_mem_1024x8__20 |     1|
+|15    |xilinx_mem_1024x8__21 |     1|
+|16    |xilinx_mem_1024x8__22 |     1|
+|17    |xilinx_mem_1024x8__23 |     1|
+|18    |xilinx_mem_1024x8__24 |     1|
+|19    |xilinx_mem_1024x8__25 |     1|
+|20    |xilinx_mem_1024x8__26 |     1|
+|21    |xilinx_mem_1024x8__27 |     1|
+|22    |xilinx_mem_1024x8__28 |     1|
+|23    |xilinx_mem_1024x8__29 |     1|
+|24    |xilinx_mem_1024x8__3  |     1|
+|25    |xilinx_mem_1024x8__30 |     1|
+|26    |xilinx_mem_1024x8__31 |     1|
+|27    |xilinx_mem_1024x8__32 |     1|
+|28    |xilinx_mem_1024x8__33 |     1|
+|29    |xilinx_mem_1024x8__34 |     1|
+|30    |xilinx_mem_1024x8__35 |     1|
+|31    |xilinx_mem_1024x8__36 |     1|
+|32    |xilinx_mem_1024x8__37 |     1|
+|33    |xilinx_mem_1024x8__38 |     1|
+|34    |xilinx_mem_1024x8__39 |     1|
+|35    |xilinx_mem_1024x8__4  |     1|
+|36    |xilinx_mem_1024x8__40 |     1|
+|37    |xilinx_mem_1024x8__41 |     1|
+|38    |xilinx_mem_1024x8__42 |     1|
+|39    |xilinx_mem_1024x8__43 |     1|
+|40    |xilinx_mem_1024x8__44 |     1|
+|41    |xilinx_mem_1024x8__45 |     1|
+|42    |xilinx_mem_1024x8__46 |     1|
+|43    |xilinx_mem_1024x8__47 |     1|
+|44    |xilinx_mem_1024x8__48 |     1|
+|45    |xilinx_mem_1024x8__49 |     1|
+|46    |xilinx_mem_1024x8__5  |     1|
+|47    |xilinx_mem_1024x8__50 |     1|
+|48    |xilinx_mem_1024x8__51 |     1|
+|49    |xilinx_mem_1024x8__52 |     1|
+|50    |xilinx_mem_1024x8__53 |     1|
+|51    |xilinx_mem_1024x8__54 |     1|
+|52    |xilinx_mem_1024x8__55 |     1|
+|53    |xilinx_mem_1024x8__56 |     1|
+|54    |xilinx_mem_1024x8__57 |     1|
+|55    |xilinx_mem_1024x8__6  |     1|
+|56    |xilinx_mem_1024x8__7  |     1|
+|57    |xilinx_mem_1024x8__8  |     1|
+|58    |xilinx_mem_1024x8__9  |     1|
+|59    |CARRY4                |   466|
+|60    |LUT1                  |   118|
+|61    |LUT2                  |  2126|
+|62    |LUT3                  |   287|
+|63    |LUT4                  |   916|
+|64    |LUT5                  |  1659|
+|65    |LUT6                  |  1573|
+|66    |MUXF7                 |     5|
+|67    |FDCE                  |    79|
+|68    |FDRE                  |  1778|
++------+----------------------+------+
+
+Report Instance Areas: 
++------+---------------------------+---------------------+------+
+|      |Instance                   |Module               |Cells |
++------+---------------------------+---------------------+------+
+|1     |top                        |                     |  9471|
+|2     |  SNN0                     |SNN_wrapper          |  9219|
+|3     |    SNPC_top0              |SNPC_top             |  9219|
+|4     |      SNPC0                |SNPC                 |  8151|
+|5     |        CNTL0              |SNPC_cntrl_9         |   643|
+|6     |        \LIF_GEN[0].LIF0   |LIF_neuron_10        |    65|
+|7     |        \LIF_GEN[10].LIF0  |LIF_neuron_11        |    65|
+|8     |        \LIF_GEN[11].LIF0  |LIF_neuron_12        |    65|
+|9     |        \LIF_GEN[12].LIF0  |LIF_neuron_13        |    65|
+|10    |        \LIF_GEN[13].LIF0  |LIF_neuron_14        |    65|
+|11    |        \LIF_GEN[14].LIF0  |LIF_neuron_15        |    65|
+|12    |        \LIF_GEN[15].LIF0  |LIF_neuron_16        |    65|
+|13    |        \LIF_GEN[16].LIF0  |LIF_neuron_17        |    65|
+|14    |        \LIF_GEN[17].LIF0  |LIF_neuron_18        |    65|
+|15    |        \LIF_GEN[18].LIF0  |LIF_neuron_19        |    65|
+|16    |        \LIF_GEN[19].LIF0  |LIF_neuron_20        |    65|
+|17    |        \LIF_GEN[1].LIF0   |LIF_neuron_21        |    65|
+|18    |        \LIF_GEN[20].LIF0  |LIF_neuron_22        |    65|
+|19    |        \LIF_GEN[21].LIF0  |LIF_neuron_23        |    65|
+|20    |        \LIF_GEN[22].LIF0  |LIF_neuron_24        |    65|
+|21    |        \LIF_GEN[23].LIF0  |LIF_neuron_25        |    65|
+|22    |        \LIF_GEN[24].LIF0  |LIF_neuron_26        |    65|
+|23    |        \LIF_GEN[25].LIF0  |LIF_neuron_27        |    65|
+|24    |        \LIF_GEN[26].LIF0  |LIF_neuron_28        |    65|
+|25    |        \LIF_GEN[27].LIF0  |LIF_neuron_29        |    65|
+|26    |        \LIF_GEN[28].LIF0  |LIF_neuron_30        |    65|
+|27    |        \LIF_GEN[29].LIF0  |LIF_neuron_31        |    65|
+|28    |        \LIF_GEN[2].LIF0   |LIF_neuron_32        |    65|
+|29    |        \LIF_GEN[30].LIF0  |LIF_neuron_33        |    65|
+|30    |        \LIF_GEN[31].LIF0  |LIF_neuron_34        |    65|
+|31    |        \LIF_GEN[32].LIF0  |LIF_neuron_35        |    65|
+|32    |        \LIF_GEN[33].LIF0  |LIF_neuron_36        |    65|
+|33    |        \LIF_GEN[34].LIF0  |LIF_neuron_37        |    65|
+|34    |        \LIF_GEN[35].LIF0  |LIF_neuron_38        |    65|
+|35    |        \LIF_GEN[36].LIF0  |LIF_neuron_39        |    65|
+|36    |        \LIF_GEN[37].LIF0  |LIF_neuron_40        |    65|
+|37    |        \LIF_GEN[38].LIF0  |LIF_neuron_41        |    65|
+|38    |        \LIF_GEN[39].LIF0  |LIF_neuron_42        |    65|
+|39    |        \LIF_GEN[3].LIF0   |LIF_neuron_43        |    65|
+|40    |        \LIF_GEN[40].LIF0  |LIF_neuron_44        |    65|
+|41    |        \LIF_GEN[41].LIF0  |LIF_neuron_45        |    65|
+|42    |        \LIF_GEN[42].LIF0  |LIF_neuron_46        |    65|
+|43    |        \LIF_GEN[43].LIF0  |LIF_neuron_47        |    65|
+|44    |        \LIF_GEN[44].LIF0  |LIF_neuron_48        |    65|
+|45    |        \LIF_GEN[45].LIF0  |LIF_neuron_49        |    65|
+|46    |        \LIF_GEN[46].LIF0  |LIF_neuron_50        |    65|
+|47    |        \LIF_GEN[47].LIF0  |LIF_neuron_51        |    65|
+|48    |        \LIF_GEN[4].LIF0   |LIF_neuron_52        |    65|
+|49    |        \LIF_GEN[5].LIF0   |LIF_neuron_53        |    65|
+|50    |        \LIF_GEN[6].LIF0   |LIF_neuron_54        |    65|
+|51    |        \LIF_GEN[7].LIF0   |LIF_neuron_55        |    65|
+|52    |        \LIF_GEN[8].LIF0   |LIF_neuron_56        |    65|
+|53    |        \LIF_GEN[9].LIF0   |LIF_neuron_57        |    65|
+|54    |        XBAR0              |xbar                 |  4388|
+|55    |      SNPC1                |SNPC__parameterized0 |  1054|
+|56    |        CNTL0              |SNPC_cntrl           |    38|
+|57    |        \LIF_GEN[0].LIF0   |LIF_neuron           |    71|
+|58    |        \LIF_GEN[1].LIF0   |LIF_neuron_0         |    71|
+|59    |        \LIF_GEN[2].LIF0   |LIF_neuron_1         |    71|
+|60    |        \LIF_GEN[3].LIF0   |LIF_neuron_2         |    71|
+|61    |        \LIF_GEN[4].LIF0   |LIF_neuron_3         |    71|
+|62    |        \LIF_GEN[5].LIF0   |LIF_neuron_4         |    71|
+|63    |        \LIF_GEN[6].LIF0   |LIF_neuron_5         |    71|
+|64    |        \LIF_GEN[7].LIF0   |LIF_neuron_6         |    71|
+|65    |        \LIF_GEN[8].LIF0   |LIF_neuron_7         |    71|
+|66    |        \LIF_GEN[9].LIF0   |LIF_neuron_8         |    71|
+|67    |        XBAR0              |xbar__parameterized0 |   306|
+|68    |  slave_if_0               |axi_slave_if         |   252|
++------+---------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:10:18 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.391 ; gain = 795.906 ; free physical = 11692 ; free virtual = 31325
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 125 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:10:14 ; elapsed = 00:10:18 . Memory (MB): peak = 1871.391 ; gain = 412.891 ; free physical = 11748 ; free virtual = 31381
+Synthesis Optimization Complete : Time (s): cpu = 00:10:18 ; elapsed = 00:10:21 . Memory (MB): peak = 1871.398 ; gain = 795.906 ; free physical = 11748 ; free virtual = 31381
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 466 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+134 Infos, 20 Warnings, 159 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:10:19 ; elapsed = 00:10:23 . Memory (MB): peak = 1903.406 ; gain = 846.527 ; free physical = 11859 ; free virtual = 31492
+INFO: [Common 17-1381] The checkpoint '/home/doanh/Work/SNN_Stack_SRAM/FPGA/SNN/SNN.runs/synth_1/SNN_top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1927.418 ; gain = 0.000 ; free physical = 11865 ; free virtual = 31499
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 31 09:35:58 2023...
