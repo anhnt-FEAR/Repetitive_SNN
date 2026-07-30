@@ -39,19 +39,6 @@ This repository consists of the SNN hardware architecture with 3-D IC-based stac
   |______env.sh                   - Environment Varriable Initialization
 ```
 
-# How to Check-out
-
-First, complete setup your github environment (linking your account).
-After that, checkout this repository using the following command:
-
-
-```
-git clone https://github.com/<YOUR_DEFINE>
-```
-
-In order to run, you need to access CAD-tools server (zxp007 or 163.143.94.123).
-In addition, the environment variable initializaiton is needed with the following command:
-
 ```
 source env.sh
 ```
